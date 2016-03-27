@@ -1,0 +1,22 @@
+.row h3 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+.row span {
+  text-align: center;
+}
+
+.banner .text {
+  text-align: right;
+}
+
+.row.card img {
+  opacity: 0.4;
+}
+
+.row.card img:hover {
+  opacity: 1;
+  cursor: pointer;
+}

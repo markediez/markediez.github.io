@@ -5,104 +5,96 @@
     <title>Tribute Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
         <div class="background col-md-8 col-md-offset-2">
-          <div class="col-md-11 col-centered">
-          <div class="title text-center">
-            <h1>Dr. Norman Borlaug</h1>
-            <h2><em>The man who saved a billion lives</em></h2>
+          <div class="picture col-md-7 col-centered">
+            <div id="myCarousel" class="carousel slide row" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+              </ol>
+
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img class="img-responsive col-centered" src="http://cache2.asset-cache.net/gc/574859359-drummer-elvin-jones-performs-on-june-25th-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=9QMziWNtBI6whP66vhs4oYbKUnLnSPcLkrw3Dp38PKIMI1e%2Fka%2BYp%2B5wA5J4MVhTHM4ByrLpp0XL2dWX%2FkDN3Q%3D%3D">
+                </div>
+                <div class="item">
+                  <img src="http://www.elvinjones.net/wp-content/uploads/2013/02/solitude-061a-elvin-jones.jpg" class="col-centered">
+                </div>
+                <div class="item">
+                  <img src="http://jazztimes.com/images/content/articles/0002/4408/200211_040_depth1.jpg?1230020995" class="col-centered">
+                </div>
+                <div class="item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Elvin_Jones1.jpg" class="col-centered">
+                </div>
+              </div>
+            </div>
+            <div class="title text-center">
+              <h2>Elvin Jones: Jazz Giant</h2>
+            </div>
           </div>
-          <div class="picture col-md-10 col-centered">
-            <img class="img-responsive col-centered" src=https://c2.staticflickr.com/4/3689/10613180113_fdf7bcd316_b.jpg>
 
-            <p class="text-center">Dr. Norman Borlaug, second from left, trains bioligists in Mexico on how to increase wheat yields - part of his life-long war on hunger.</p>
+          <div class="timeline col-md-8 col-md-offset-2">
+            <h3>Here's a time line of Elvin's life:</h3>
+
+            <ul>
+              <li>
+                <span class="year">1927</span>
+                - Born in Pontiac, Michigan
+              </li>
+              <li>
+                <span class="year">1940</span>
+                - Joined his high school's black marching band, where he developed his foundation in rudiments
+              </li>
+              <li>
+                <span class="year">1946</span>
+                -  Began service in the United States Army
+              </li>
+              <li>
+                <span class="year">1949</span>
+                -  Discharged from the military and borrowed $35 from his sister to purchase a drumset
+              </li>
+              <li>
+                <span class="year">1955</span>
+                -  Joined Charles Mingus and his big band in New York after being rejected by Benny Goodman's band
+              </li>
+              <li>
+                <span class="year">1960</span>
+                -  Joined the John Coltrane Quartet with Jimmy Garrison and McCoy Tyner
+              </li>
+              <li>
+                <span class="year">1966</span>
+                -  Left the quartet
+              </li>
+              <li>
+                <span class="year">1968</span>
+                -  Formed a trio with Joe Farrell and Jimmy Garrison and continued to lead many other groups from then on
+              </li>
+              <li>
+                <span class="year">2004</span>
+                - dies at the age of 76.
+              </li>
+            </ul>
           </div>
-
-        <div class="timeline col-md-8 col-md-offset-2">
-          <h3>Here's a time line of Dr. Borlaug's life:</h3>
-
-          <ul>
-            <li>
-              <span class="year">1914</span>
-              - Born in Cresco, Iowa
-            </li>
-            <li>
-              <span class="year">1933</span>
-              - Leaves his family's farm to attend the University of Minnesota, thanks to a Depression era program known as the "National Youth Administration"
-            </li>
-            <li>
-              <span class="year">1935</span>
-              -  Has to stop school and save up more money. Works in the Civilian Conservation Corps, helping starving Americans. "I saw how food changed them", he said. "All of this left scars on me."
-            </li>
-            <li>
-              <span class="year">1937</span>
-              -  Finishes university and takes a job in the US Forestry Service
-            </li>
-            <li>
-              <span class="year">1938</span>
-              -  Marries wife of 69 years Margret Gibson. Gets laid off due to budget cuts. Inspired by Elvin Charles Stakman, he returns to school study under Stakman, who teaches him about breeding pest-resistent plants.
-            </li>
-            <li>
-              <span class="year">1941</span>
-              -  Tries to enroll in the military after the Pearl Harbor attack, but is rejected. Instead, the military asked his lab to work on waterproof glue, DDT to control malaria, disenfectants, and other applied science.
-            </li>
-            <li>
-              <span class="year">1942</span>
-              -  Receives a Ph.D in Genetecis and Plant Pathology
-            </li>
-            <li>
-              <span class="year">1944</span>
-              -  Rejects a 100% salary increase from Dupont, leaves behind his pregnant wife, and flies to Mexico to head a new plant pathology program. Over the next 16 years, his team breeds 6,000 different strains of disease resistent wheat - including different varieties for each major climate on Earth.
-            </li>
-            <li>
-              <span class="year">1945</span>
-              -  Discovers a way to grown wheat twice each season, doubling wheat yields
-            </li>
-            <li>
-              <span class="year">1953</span>
-              - crosses a short, sturdy dwarf breed of wheat with a high-yeidling American breed, creating a strain that responds well to fertalizer. It goes on to provide 95% of Mexico's wheat.
-            </li>
-            <li>
-              <span class="year">1962</span>
-              - Visits Delhi and brings his high-yielding strain of wheat to the Indian subcontinent in time to help mitigate mass starvation due to a rapidly expanding population
-            </li>
-            <li>
-              <span class="year">1970</span>
-              - receives the Nobel Peace Prize
-            </li>
-            <li>
-              <span class="year">1983</span>
-              - Helps seven African countries dramatically increase their maize and sorghum yields.
-            </li>
-            <li>
-              <span class="year">1984</span>
-              - becomes a distinguished professor at Texas A&M University
-            </li>
-            <li>
-              <span class="year">2005</span>
-              - states "we will have to double the world food supply by 2050." Argues that genetically modified crops are the only way we can meet the demand, as we run out of arable land. Says that GM crops are not inherently dangerous because "we've been genetically modifying plants and animals for a long time. Long before we called it science, people were selecting the best breeds."
-            </li>
-            <li>
-              <span class="year">2009</span>
-              - dies at the age of 95.
-            </li>
-          </ul>
+          <div class="timeline col-md-8 col-md-offset-2">
+            <blockquote>"There will never be a more pure or powerful drumming force, or a higher level of drumming intelligence and passion, than that of Mr. Elvin Jones. Elvin represented everything that was good and great about jazz and life: the swingin’est beat, the brightest smile, the warmest (and most sweat-stoked!) embrace. Elvin was the life force of our music. And as hard as it is to imagine life and jazz without his bodily presence, he lives on in the tremendous body of recorded work he left us, and in the memories of those who were lucky enough to know him or see him in person. Elvin Jones left the world a much better place."
+            <h5><em>- Peter Erskine</em></h5></blockquote>
+          </div>
+          <div class="links col-md-8 col-md-offset-2">
+            <span>Learn more about Elvin Jones on his <a href="https://en.wikipedia.org/wiki/Elvin_Jones">Wiki</a></span>
+          </div>
         </div>
-        <div class="timeline col-md-8 col-md-offset-2">
-          <h4>"Borlaug's life and achievement are testimony to the far-reaching contribution that one man's towering intellect, persistence and scientific vision can make to human peace and progress."</h4>
-          <h5><em>-- Indian Prime Minister Manmohan Singh</em></h5>
-
-          <h3>If you have time, you should read more about this incredible human being on his <a href="https://en.wikipedia.org/wiki/Norman_Borlaug" target="_blank">Wikipedia entry</a></h3>
-        </div>
-        </div>
-        </div>
-        <div class="col-md-8 col-md-offset-2">
-          <hr>
-          <p class="text-center">Written and coded by <a href="https://www.freecodecamp.com/markediez">Mark Diez</a></p>
-        </div>
+      </div>
+      <div class="col-md-8 col-md-offset-2">
+        <hr>
+        <p class="text-center">Written and coded by <a href="https://www.freecodecamp.com/markediez">Mark Diez</a></p>
       </div>
     </div>
   </body>

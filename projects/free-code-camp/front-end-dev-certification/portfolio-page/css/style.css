@@ -1,3 +1,6 @@
+p {
+  line-height: 1.5;
+}
 #profile-image {
   border-radius: 50%;
 }
@@ -13,20 +16,30 @@
 }
 
 #about div {
-  top: 30%;
+  top: 25%;
 }
 
 #projects {
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
-#projects div {
-  margin-bottom: 1em;
+#project-list {
+  flex-wrap: wrap;
 }
 
 #experience {
   background-color: #eeeeee;
-  height: 32em;
+  padding-bottom: 2em;
+}
+
+#information {
+  height: 400px;
+  border: 1px solid green;
+}
+
+#exp-list {
+  height: 400px;
+  border: 1px solid green;
 }
 
 #contact {
@@ -61,5 +74,7 @@
 .card {
   height: 200px;
   width: 30%;
-  background: green;
+  margin: 1em 0;
+  border: 1px solid green;
+
 }

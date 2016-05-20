@@ -3,11 +3,12 @@
 }
 
 #navigation {
-  margin-top: 16px;
+  margin-top: 2em;
 }
 
 #about {
-  margin-top: 16px;
+  background-color: #eeeeee;
+  margin-top: 2em;
   height: 32em;
 }
 
@@ -16,17 +17,20 @@
 }
 
 #projects {
-  background-color: #eeeeee;
-  height: 32em;
+  padding-bottom: 1em;
+}
+
+#projects div {
+  margin-bottom: 1em;
 }
 
 #experience {
-  background-color: white;
+  background-color: #eeeeee;
   height: 32em;
 }
 
 #contact {
-  background-color: #eeeeee;
+  height: 32em;
 }
 
 #footer {
@@ -47,4 +51,15 @@
 .space-between {
   display: flex;
   justify-content: space-between;
+}
+
+.accent-text {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.card {
+  height: 200px;
+  width: 30%;
+  background: green;
 }

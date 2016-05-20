@@ -1,0 +1,50 @@
+#profile-image {
+  border-radius: 50%;
+}
+
+#navigation {
+  margin-top: 16px;
+}
+
+#about {
+  margin-top: 16px;
+  height: 32em;
+}
+
+#about div {
+  top: 30%;
+}
+
+#projects {
+  background-color: #eeeeee;
+  height: 32em;
+}
+
+#experience {
+  background-color: white;
+  height: 32em;
+}
+
+#contact {
+  background-color: #eeeeee;
+}
+
+#footer {
+  background-color: gray;
+}
+
+.vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+  height: inherit;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,6 +1,11 @@
 p {
   line-height: 1.5;
 }
+
+textarea {
+  resize: none;
+}
+
 #profile-image {
   border-radius: 50%;
 }
@@ -16,11 +21,12 @@ p {
 }
 
 #about div {
-  top: 25%;
+  top: 20%;
 }
 
 #projects {
-  padding-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 10em;
 }
 
 #project-list {
@@ -29,7 +35,8 @@ p {
 
 #experience {
   background-color: #eeeeee;
-  padding-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 10em;
 }
 
 #information {
@@ -43,7 +50,27 @@ p {
 }
 
 #contact {
-  height: 32em;
+  padding-top: 2em;
+  padding-bottom: 5em;
+}
+
+#media {
+  flex-wrap: wrap;
+  padding-left: 0;
+  align-content: center;
+  height: 400px;
+}
+
+#media img {
+  padding-left: 0;
+  margin-top: 1em;
+}
+
+#email {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 #footer {
@@ -76,5 +103,16 @@ p {
   width: 30%;
   margin: 1em 0;
   border: 1px solid green;
+}
 
+.block {
+  display:block;
+}
+
+.item {
+  margin-top: 1em;
+}
+
+.form-btn {
+  margin-top: 1em;
 }

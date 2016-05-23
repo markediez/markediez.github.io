@@ -10,8 +10,23 @@ textarea {
   border-radius: 50%;
 }
 
-#navigation {
-  margin-top: 2em;
+#logo {
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
+  box-shadow: 0px 18px 37px -16px rgba(0,0,0,0.75);
+}
+
+#logo li {
+  display: inline;
+}
+
+#logo ul {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
 }
 
 #about {
@@ -41,12 +56,12 @@ textarea {
 
 #information {
   height: 400px;
-  border: 1px solid green;
+  border: 1px solid #eeeeee;
 }
 
 #exp-list {
   height: 400px;
-  border: 1px solid green;
+  border: 1px solid #eeeeee;
 }
 
 #contact {
@@ -77,6 +92,10 @@ textarea {
   background-color: gray;
 }
 
+#footer a {
+  color: white;
+}
+
 .vertical-center {
   display: table-cell;
   vertical-align: middle;
@@ -102,7 +121,7 @@ textarea {
   height: 200px;
   width: 30%;
   margin: 1em 0;
-  border: 1px solid green;
+  border: 1px solid #000000;
 }
 
 .block {
@@ -115,4 +134,15 @@ textarea {
 
 .form-btn {
   margin-top: 1em;
+}
+
+a.nav {
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+
+a.nav:hover {
+  background-color: #eeeeee;
+  text-decoration: none;
 }

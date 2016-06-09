@@ -1,0 +1,16 @@
+/*div {
+  border: 1px solid red !important;
+}*/
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-vertical-center {
+  align-self: center;
+}
+
+form > div {
+  margin-top: 1em;
+}

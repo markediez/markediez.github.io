@@ -24,8 +24,7 @@
       echo "true";
     } else {
       // username already exists
-      echo "false";
-      echo $db-lastErrorMsg();
+      echo $db->lastErrorMsg();
     }
   }
 ?>

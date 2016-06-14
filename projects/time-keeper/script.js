@@ -28,23 +28,37 @@ function addJob() {
 function postFormSubmit(formID, url) {
   if(isValid(formID)) {
     // Get params
-    var inputs = $(formID + ' input');
-    var params = inputs[0].name + "=" + inputs.val();
-    for(var i = 1; i < $(formID + ' input').length; i++) {
-      inputs = inputs.next();
-      if(inputs[0].name != '') {
-        params += "&" + inputs[0].name + "=" + inputs.val();
+    var inputs = $(formID + ' .tooltips input');
+    var params = inputs[0].name + "=" + inputs[0].value;
+    for(var i = 1; i < $(formID + ' .tooltips input').length; i++) {
+      if(inputs[i].name != '') {
+        params += "&" + inputs[i].name + "=" + inputs[i].value;
       }
     }
-
+    console.log(params);
     // Run AJAX
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        alert(xmlhttp.responseText);
-      } else if (xmlhttp.status == 500) {
-        // alert(xmlhttp.responseText);
+        switch(formID) {
+          case '#login-form':
+            alert("login-form");
+            break;
+          case '#register-form':
+            if(xmlhttp.responseText.indexOf('username') !== -1) {
+              $(formID + ' #username').addClass('form-invalid');
+              $(formID + ' #username').focus();
+              showToolTip($(formID + ' #username'), "Username is already in use!", 'bottom');
+            } else if (xmlhttp.responseText.indexOf('email') !== false) {
+              $(formID + ' #email').addClass('form-invalid');
+              $(formID + ' #email').focus();
+              showToolTip($(formID + ' #email'), "Email address is already in use!", 'bottom');
+            }
+            break;
+          default:
+            alert(xmlhttp.responseText);
+        }
       }
     };
 

@@ -15,12 +15,15 @@
         </div>
       </div>
 
-      <div id="login" class="row">
-        <form class="col-md-4">
+      <div id="register" class="row">
+        <form id="register-form" class="col-md-4">
           <input class="col-md-12 form-control" type="text" placeholder="username" name="username" required>
           <input class="col-md-12 form-control form-item" type="password" placeholder="password" name="password" required>
-          <a class="col-md-4 col-md-offset-3 btn btn-primary form-item" href="register.php">Register</a>
-          <button class="col-md-4 col-md-offset-1 btn btn-primary form-item">Login</button>
+          <input class="col-md-12 form-control form-item" type="text" placeholder="email" name="email" required>
+          <button class="col-md-4 col-md-offset-8 btn btn-primary form-item">Register</button>
+          <a class='col-md-4 col-md-offset-8 text-right no-padding' href="/">
+            <span class="small">Already have an account? Login</span>
+          </a>
         </form>
       </div>
 

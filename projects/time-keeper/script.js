@@ -25,7 +25,7 @@ function addJob() {
   }
 }
 
-function login(formID) {
+function postFormSubmit(formID, url) {
   if(isValid(formID)) {
     // Get params
     var inputs = $(formID + ' input');
@@ -39,7 +39,6 @@ function login(formID) {
 
     // Run AJAX
     var xmlhttp = new XMLHttpRequest();
-    var url = "http://localhost:8888/db/ajax/login.php";
 
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {

@@ -20,7 +20,7 @@
           <input class="col-md-12 form-control" type="text" placeholder="username" name="username" required>
           <input class="col-md-12 form-control form-item" type="password" placeholder="password" name="password" required>
           <a class="col-md-4 col-md-offset-3 btn btn-primary form-item" href="register.php">Register</a>
-          <a class="col-md-4 col-md-offset-1 btn btn-primary form-item" onclick="login('#login-form')">Login</a>
+          <a class="col-md-4 col-md-offset-1 btn btn-primary form-item" onclick="postFormSubmit('#login-form', 'http://localhost:8888/db/ajax/login.php')">Login</a>
           <input type="submit" class="hide">
         </form>
       </div>

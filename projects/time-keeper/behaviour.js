@@ -7,3 +7,12 @@ $( document ).ready(function() {
     $(this).addClass("active");
   });
 });
+
+function isValid(formID) {
+  if(!$(formID)[0].checkValidity()) {
+    $(formID).find(':submit').click();
+    return false;
+  } else {
+    return true;
+  }
+}

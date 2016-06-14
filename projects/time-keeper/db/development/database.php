@@ -28,7 +28,7 @@
         role_id INT NOT NULL,
         username TEXT NOT NULL UNIQUE,
         password TEXT NOT NULL,
-        email TEXT NOT NULL,
+        email TEXT NOT NULL UNIQUE,
         created_at DATETIME NOT NULL,
         updated_at DATETIME NOT NULL
       );');

@@ -15,8 +15,7 @@ a {
   overflow-x: auto;
 }
 
-#new-job {
-
+#job-input {
   margin: 15px 0 15px 0;
 }
 
@@ -111,7 +110,7 @@ a {
   cursor: pointer;
 }
 
-.clickable-row.active {
+tr.clickable-row.active {
   background-color: #9bb8ff;
 }
 /* End Table */

@@ -3,7 +3,7 @@
  */
 
 function addJob() {
-  var job_name = $('#new-job').val();
+  var job_name = $('#job-input').val();
 
   if(job_name != '') {
     var xmlhttp = new XMLHttpRequest();
@@ -15,7 +15,7 @@ function addJob() {
             $('.clickable-row.active').removeClass("active");
             $(this).addClass("active");
           });
-          $('#new-job').val('');
+          $('#job-input').val('');
       }
     };
 
@@ -25,12 +25,12 @@ function addJob() {
   }
 }
 
-function postFormSubmit(formID, url) {
+function postFormSubmit(formID, elements, url) {
   if(isValid(formID)) {
     // Get params
-    var inputs = $(formID + ' .tooltips input');
+    var inputs = $(elements);
     var params = inputs[0].name + "=" + inputs[0].value;
-    for(var i = 1; i < $(formID + ' .tooltips input').length; i++) {
+    for(var i = 1; i < $(elements).length; i++) {
       if(inputs[i].name != '') {
         params += "&" + inputs[i].name + "=" + inputs[i].value;
       }
@@ -43,7 +43,9 @@ function postFormSubmit(formID, url) {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         switch(formID) {
           case '#login-form':
-            alert("login-form");
+            if(xmlhttp.responseText.indexOf('true') !== -1) {
+              alert("hi");
+            }
             break;
           case '#register-form':
             if(xmlhttp.responseText.indexOf('username') !== -1) {

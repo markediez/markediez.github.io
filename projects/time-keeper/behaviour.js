@@ -21,14 +21,7 @@ function showToolTip(element, msg, position) {
     });
 
     var animationEvent = whichAnimationEvent();
-
-    $(this).addClass('blink');
-    $(this).one(animationEvent,
-      function(event) {
-        $(this).removeClass('form-invalid');
-        $(this).removeClass('blink');
-        $(this).off('blur'); // avoid blur from adding on blur after once
-    });
+    $(this).removeClass('form-invalid');
   }); // end blur
 }
 

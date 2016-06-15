@@ -9,7 +9,7 @@ a {
 }
 
 #choices {
-  border: 1px solid black !important;
+  border: 1px solid black;
   padding: 0;
   max-height:200px;
   overflow-x: auto;
@@ -39,8 +39,14 @@ a {
 }
 
 .form-invalid {
-  border: 1px solid red !important;
-  box-shadow: 0px 0px 12px 0px rgba(255, 0, 0, .5) !important;
+  box-shadow: 0px 0px 12px 0px rgba(255, 0, 0, 0.30);
+  border: 1px solid rgba(255,0,0,1);
+}
+
+.form-invalid:focus {
+  box-shadow: 0px 0px 12px 0px rgba(255, 0, 0, 0.30);
+  border: 1px solid rgba(255,0,0,1);
+  /*animation: glow-out 0.3s;*/
 }
 
 .tooltips {
@@ -106,6 +112,30 @@ a {
 }
 
 .clickable-row.active {
-  background-color: #9bb8ff !important;
+  background-color: #9bb8ff;
 }
 /* End Table */
+.blink {
+  animation: glow-out 0.3s;
+}
+
+/* Animations */
+@keyframes remove {
+    0%   {border: 1px solid rgba(255,0,0,1);}
+    25%  {border: 1px solid rgba(0,255,0,0.25);}
+    50%  {border: 1px solid rgba(0,255,0,0.5);}
+    75%  {border: 1px solid rgba(0,255,0,0.75);}
+    100% {border: 1px solid rgba(0,255,0,1);}
+}
+
+@keyframes example {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes glow-out {
+  0%   { border-color: rgba(255, 0, 0, 1); box-shadow: 0px 0px 12px 0px rgba(255, 0, 0, 0.30); }
+  100%   { border-color: rgba(204, 204, 204, 1); box-shadow: 0px 0px 12px 0px rgba(255, 0, 0, 0); }
+}
+/* End Animations */

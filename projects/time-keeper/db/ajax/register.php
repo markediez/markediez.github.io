@@ -23,7 +23,7 @@
       // Success
       echo "true";
     } else {
-      // username already exists
+      // username/email already exists
       echo $db->lastErrorMsg();
     }
   }

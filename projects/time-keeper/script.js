@@ -49,18 +49,35 @@ function postFormSubmit(formID, url) {
             if(xmlhttp.responseText.indexOf('username') !== -1) {
               $(formID + ' #username').addClass('form-invalid');
               $(formID + ' #username').focus();
-              showToolTip($(formID + ' #username'), "Username is already in use!", 'bottom');
+              showToolTip($(formID + ' #username'), "This username is already in use!", 'bottom');
             } else if (xmlhttp.responseText.indexOf('email') !== false) {
               $(formID + ' #email').addClass('form-invalid');
               $(formID + ' #email').focus();
-              showToolTip($(formID + ' #email'), "Email address is already in use!", 'bottom');
+              showToolTip($(formID + ' #email'), "This email address is already in use!", 'bottom');
             }
             break;
           default:
             alert(xmlhttp.responseText);
         }
-      }
-    };
+
+        $('.form-invalid').blur(function() {
+
+          $('.tooltips .form-tooltip').fadeOut('fast', function() {
+            $(this).remove();
+          });
+
+          var animationEvent = whichAnimationEvent();
+
+          $(this).addClass('blink');
+          $(this).one(animationEvent,
+            function(event) {
+              $(this).removeClass('blink');
+              $(this).removeClass('form-invalid');
+              $(this).off('blur'); // avoid blur from adding on blur after once
+          });
+        }); // end blur
+      } // end if
+    }; // end xmlhttp
 
     xmlhttp.open("POST", url, true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

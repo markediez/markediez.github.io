@@ -33,8 +33,6 @@
           <input type="submit" class="hide">
         </form>
       </div>
-      <div class="form-invalid" style="width:100px; height:100px; background-color: pink; border:1px solid red;">
-      </div>
     </div>
   </body>
 </html>

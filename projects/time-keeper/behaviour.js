@@ -8,7 +8,28 @@ function isValid(formID) {
 }
 
 function showToolTip(element, msg, position) {
-  $('<span class="form-tooltip col-md-4">' + msg + '</span>').insertAfter(element);
+  $('<span class="form-tooltip-' + position + ' col-md-4">' + msg + '</span>').insertAfter(element);
+
+  $('.form-invalid').blur(function() {
+
+    $('.tooltips .form-tooltip-bottom').fadeOut('fast', function() {
+      $(this).remove();
+    });
+
+    $('.tooltips .form-tooltip-top').fadeOut('fast', function() {
+      $(this).remove();
+    });
+
+    var animationEvent = whichAnimationEvent();
+
+    $(this).addClass('blink');
+    $(this).one(animationEvent,
+      function(event) {
+        $(this).removeClass('form-invalid');
+        $(this).removeClass('blink');
+        $(this).off('blur'); // avoid blur from adding on blur after once
+    });
+  }); // end blur
 }
 
 

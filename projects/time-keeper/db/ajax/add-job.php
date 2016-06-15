@@ -18,11 +18,10 @@
   if($statement === false) {
     echo "Failure";
   } else {
-    echo $db->lastErrorMsg();
-    echo "<br>";
-    $res = $statement->execute();
-    var_dump($res);
-    echo $db->lastErrorMsg();
-    echo "Success";
+    if ($statement->execute() !== false) {
+      echo "true";
+    } else {
+      echo $db->lastErrorMsg();
+    }
   }
 ?>

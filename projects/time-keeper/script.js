@@ -9,6 +9,7 @@ function addJob() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        if(xmlhttp.responseText.indexOf('true') !== -1) {
           $('.table-choice tr:last').before('<tr class="clickable-row"><td>' + job_name + '</td><td></td></tr>');
           $('.clickable-row').click(function() {
             // Remove previous active
@@ -16,6 +17,11 @@ function addJob() {
             $(this).addClass("active");
           });
           $('#job-input').val('');
+        } else {
+          $('#job-input').addClass('form-invalid');
+          $('#job-input').focus();
+          showToolTip('#job-input', 'This job already exists!', 'top');
+        }
       }
     };
 
@@ -63,23 +69,6 @@ function postFormSubmit(formID, elements, url) {
           default:
             alert(xmlhttp.responseText);
         }
-
-        $('.form-invalid').blur(function() {
-
-          $('.tooltips .form-tooltip').fadeOut('fast', function() {
-            $(this).remove();
-          });
-
-          var animationEvent = whichAnimationEvent();
-
-          $(this).addClass('blink');
-          $(this).one(animationEvent,
-            function(event) {
-              $(this).removeClass('blink');
-              $(this).removeClass('form-invalid');
-              $(this).off('blur'); // avoid blur from adding on blur after once
-          });
-        }); // end blur
       } // end if
     }; // end xmlhttp
 

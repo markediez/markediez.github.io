@@ -14,7 +14,7 @@
           $('.clickable-row.active').removeClass("active");
           $(this).addClass("active");
         });
-        
+
         $('#title-input').keydown(function(event) {
           // Enter Key
           if(event.keyCode==13) {
@@ -74,7 +74,11 @@
                 <td></td>
               </tr>
               <tr>
-                <td><input id="job-input" type="text" class="form-control" placeholder="Add a new job ..."></td>
+                <td>
+                  <div class="tooltips col-md-12 no-padding">
+                    <input id="job-input" type="text" class="form-control" placeholder="Add a new job ..." name="title">
+                  </div>
+                </td>
                 <td><a id="job-button" onclick="addJob()"><i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i></a></td>
               </tr>
             </table>

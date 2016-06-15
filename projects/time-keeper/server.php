@@ -10,4 +10,8 @@ function addHeaders($title) {
   echo '<script type="text/javascript" src="http://' . $_SERVER['HTTP_HOST'] . '/script.js"></script>';
 }
 
+function setSession($post) {
+  $_SESSION['user_id'] = $post['user_id'];
+}
+
 ?>

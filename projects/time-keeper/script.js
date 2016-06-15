@@ -49,8 +49,13 @@ function postFormSubmit(formID, elements, url) {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         switch(formID) {
           case '#login-form':
-            if(xmlhttp.responseText.indexOf('true') !== -1) {
-              alert("hi");
+            if(xmlhttp.responseText.indexOf('false') !== -1) {
+              alert("xmlhttp.responseText");
+              // showToolTip(formID);
+            } else { // Logged In
+              $(formID).append('<input type="hidden" name="user_id" value="' + xmlhttp.responseText + '">');
+              $(formID).find(':submit').click();
+
             }
             break;
           case '#register-form':

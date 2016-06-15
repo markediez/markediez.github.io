@@ -1,3 +1,7 @@
+<?php
+   ob_start();
+   session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,6 +10,21 @@
       include('db/development/database.php');
       addHeaders("Time Keeper");
       $db = new DBLite();
+
+      // Move to Login if the passed values are invalid
+      $query = "SELECT * FROM Users WHERE username = :username AND password = :password AND id = :id";
+      $statement = $db->prepare($query);
+      $statement->bindValue(':username', $_POST['username'], SQLITE3_TEXT);
+      $statement->bindValue(':password', $_POST['password'], SQLITE3_TEXT);
+      $statement->bindValue(':id', $_POST['user_id'], SQLITE3_INTEGER);
+      $res = $statement->execute();
+      $row = $res->fetchArray();
+      if ($row['id'] != $_POST['user_id']) {
+         header('Location: index.php');
+      } else {
+        setSession($_POST);
+      }
+
     ?>
     <script type="text/javascript">
       $( document ).ready(function() {

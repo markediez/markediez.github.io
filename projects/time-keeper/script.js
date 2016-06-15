@@ -50,10 +50,12 @@ function postFormSubmit(formID, url) {
               $(formID + ' #username').addClass('form-invalid');
               $(formID + ' #username').focus();
               showToolTip($(formID + ' #username'), "This username is already in use!", 'bottom');
-            } else if (xmlhttp.responseText.indexOf('email') !== false) {
+            } else if (xmlhttp.responseText.indexOf('email') !== -1) {
               $(formID + ' #email').addClass('form-invalid');
               $(formID + ' #email').focus();
               showToolTip($(formID + ' #email'), "This email address is already in use!", 'bottom');
+            } else {
+              window.location.href = 'index.php';
             }
             break;
           default:

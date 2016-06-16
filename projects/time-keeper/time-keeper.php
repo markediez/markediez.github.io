@@ -9,6 +9,16 @@
   } else {
     checkSession();
   }
+
+  // If there is currently a time log in progress, redirect to waiting
+  $query = "SELECT id FROM WorkLog WHERE user_id=:uid and end_time IS NULL OR end_time = ''";
+  $statement = $db->prepare($query);
+  $statement->bindValue(':uid', $_SESSION['user_id']);
+  $res = $statement->execute();
+  $row = $res->fetchArray();
+  if($row) {
+    redirect('time-progress.php?log_id=' . $row['id']);
+  }
 ?>
 <!DOCTYPE html>
 <html>

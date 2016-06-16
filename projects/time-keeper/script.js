@@ -54,6 +54,18 @@ function startJob() {
   } // end if
 } // end startJob
 
+function stopJob(logID) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      window.location.href = 'time-keeper.php';
+    }
+  }
+
+  xmlhttp.open("GET", 'http://localhost:8888/db/ajax/end-job.php?log_id=' + logID, true);
+  xmlhttp.send();
+}
+
 function postFormSubmit(formID, elements, url) {
   if(isValid(formID)) {
     // Get params

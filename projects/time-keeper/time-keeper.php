@@ -1,22 +1,20 @@
 <?php
-   ob_start();
-   session_start();
+  include("server.php");
+  include('db/development/database.php');
+  $db = new DBLite();
+
+  // Move to Login if the passed values are invalid or no session
+  if(sizeof($_POST) > 0) {
+    setSession($_POST);
+  } else {
+    checkSession();
+  }
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <?php
-      include("server.php");
-      include('db/development/database.php');
       addHeaders("Time Keeper");
-      $db = new DBLite();
-
-      // Move to Login if the passed values are invalid or no session
-      if(!isset($_SESSION['valid']) && sizeof($_POST) > 0) {
-        setSession($_POST);
-      } else if(!isset($_SESSION['valid']) && sizeof($_POST) <= 0){
-        header('Location: index.php');
-      }
     ?>
     <script type="text/javascript">
       $( document ).ready(function() {

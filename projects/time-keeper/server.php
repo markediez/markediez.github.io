@@ -1,4 +1,7 @@
 <?php
+ob_start();
+session_start();
+
 function addHeaders($title) {
   echo "<title>$title</title>";
   echo '<meta charset="utf-8">';
@@ -21,6 +24,21 @@ function setSession($post) {
   $_SESSION['username'] = $post['username'];
   $_SESSION['valid'] = true;
   $_SESSION['timeout'] = time();
+}
+
+function checkSession() {
+  if ($_SESSION['valid']) {
+    return true;
+  } else {
+    $_SESSION['valid'] = false;
+    redirect('index.php');
+    return false;
+  }
+}
+
+function redirect($url, $statusCode = 303) {
+  header('Location: ' . $url, true, $statusCode);
+  die();
 }
 
 ?>

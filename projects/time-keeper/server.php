@@ -11,7 +11,16 @@ function addHeaders($title) {
 }
 
 function setSession($post) {
+  $index = 0;
+  $_SESSION[$index++] = $post['user_id'];
+  $_SESSION[$index++] = $post['username'];
+  $_SESSION[$index++] = true;
+  $_SESSION[$index++] = time();
+
   $_SESSION['user_id'] = $post['user_id'];
+  $_SESSION['username'] = $post['username'];
+  $_SESSION['valid'] = true;
+  $_SESSION['timeout'] = time();
 }
 
 ?>

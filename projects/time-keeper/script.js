@@ -17,6 +17,8 @@ function addJob() {
             $(this).addClass("active");
           });
           $('#job-input').val('');
+        } else if(xmlhttp.responseText.indexOf('Invalid') !== -1) {
+          window.location.href = "index.php";
         } else {
           $('#job-input').addClass('form-invalid');
           $('#job-input').focus();
@@ -25,8 +27,7 @@ function addJob() {
       }
     };
 
-    // TODO: Use session ID as user_id, only send in title?
-    xmlhttp.open("GET", "http://localhost:8888/db/ajax/add-job.php?user_id=1&title=" + job_name, true);
+    xmlhttp.open("GET", "http://localhost:8888/db/ajax/add-job.php?title=" + job_name, true);
     xmlhttp.send();
   }
 }

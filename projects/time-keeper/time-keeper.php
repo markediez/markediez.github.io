@@ -11,20 +11,12 @@
       addHeaders("Time Keeper");
       $db = new DBLite();
 
-      // Move to Login if the passed values are invalid
-      $query = "SELECT * FROM Users WHERE username = :username AND password = :password AND id = :id";
-      $statement = $db->prepare($query);
-      $statement->bindValue(':username', $_POST['username'], SQLITE3_TEXT);
-      $statement->bindValue(':password', $_POST['password'], SQLITE3_TEXT);
-      $statement->bindValue(':id', $_POST['user_id'], SQLITE3_INTEGER);
-      $res = $statement->execute();
-      $row = $res->fetchArray();
-      if ($row['id'] != $_POST['user_id']) {
-         header('Location: index.php');
-      } else {
+      // Move to Login if the passed values are invalid or no session
+      if(!isset($_SESSION['valid']) && sizeof($_POST) > 0) {
         setSession($_POST);
+      } else if(!isset($_SESSION['valid']) && sizeof($_POST) <= 0){
+        header('Location: index.php');
       }
-
     ?>
     <script type="text/javascript">
       $( document ).ready(function() {
@@ -58,6 +50,7 @@
       <div id="header" class="row">
         <div class="col-md-12">
           <h1>Time Keeper</h1>
+          <a href="logout.php">Logout</a>
         </div>
       </div>
 
@@ -69,7 +62,8 @@
           <div id="choices" class="col-md-12 form-item">
             <table class="table-choice">
               <?php
-                $statement = $db->prepare("SELECT id, title FROM Jobs"); // TODO: WHERE ID = user_id
+                $statement = $db->prepare("SELECT id, title FROM Jobs WHERE user_id = :id");
+                $statement->bindValue(':id', $_SESSION['user_id']);
                 $result = $statement->execute();
                 while($row = $result->fetchArray()) {
                   echo "<tr class=\"clickable-row\">";
@@ -80,18 +74,6 @@
                   echo "</tr>";
                 }
               ?>
-              <tr class="clickable-row active">
-                <td>DSS IT</td>
-                <td></td>
-              </tr>
-              <tr class="clickable-row">
-                <td>PTTS</td>
-                <td></td>
-              </tr>
-              <tr class="clickable-row">
-                <td>EDS</td>
-                <td></td>
-              </tr>
               <tr>
                 <td>
                   <div class="tooltips col-md-12 no-padding">

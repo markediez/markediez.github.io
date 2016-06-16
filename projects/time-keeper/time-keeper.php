@@ -55,7 +55,7 @@
       </div>
 
       <div id="time-keeper-form" class="row">
-        <form class="col-md-4">
+        <form id="time-start" class="col-md-4">
           <div class="col-md-12 no-padding">
             <input id="title-input" type="text" class="form-control" name="title" placeholder="Enter Title" required>
           </div>
@@ -67,7 +67,7 @@
                 $result = $statement->execute();
                 while($row = $result->fetchArray()) {
                   echo "<tr class=\"clickable-row\">";
-                    echo "<td data-job-id=" . $row['id'] .">";
+                    echo "<td data-id=" . $row['id'] .">";
                       echo $row['title'];
                     echo "</td>";
                     echo "<td></td>";
@@ -85,8 +85,9 @@
             </table>
           </div>
           <div class="col-md-12 form-item">
-            <button id="start-button" class="col-md-6 col-md-offset-3 btn btn-primary">Start</button>
+            <a id="start-button" class="col-md-6 col-md-offset-3 btn btn-primary" onclick="startJob()">Start</a>
           </div>
+          <input type="submit" class="hidden">
         </form>
       </div>
     </div>

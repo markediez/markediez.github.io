@@ -32,6 +32,28 @@ function addJob() {
   }
 }
 
+function startJob() {
+  if(isValid('#time-start')) {
+    var jobID = $('.active td').data('id');
+    var title = $('#title-input').val();
+    if (!jobID) {
+      // showToolTip();
+    } else {
+      // Run AJAX
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          alert("Start");
+        }
+      }
+
+      xmlhttp.open("GET", "http://localhost:8888/db/ajax/start-job.php?job_id=" + jobID + "&title=" + title, true);
+      xmlhttp.send();
+    } // end else
+  } // end if
+} // end startJob
+
 function postFormSubmit(formID, elements, url) {
   if(isValid(formID)) {
     // Get params
@@ -42,7 +64,7 @@ function postFormSubmit(formID, elements, url) {
         params += "&" + inputs[i].name + "=" + inputs[i].value;
       }
     }
-    console.log(params);
+
     // Run AJAX
     var xmlhttp = new XMLHttpRequest();
 

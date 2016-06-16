@@ -67,30 +67,32 @@
           <div class="col-md-12 no-padding">
             <input id="title-input" type="text" class="form-control" name="title" placeholder="Enter Title" required>
           </div>
-          <div id="choices" class="col-md-12 form-item">
-            <table class="table-choice">
-              <?php
-                $statement = $db->prepare("SELECT id, title FROM Jobs WHERE user_id = :id");
-                $statement->bindValue(':id', $_SESSION['user_id']);
-                $result = $statement->execute();
-                while($row = $result->fetchArray()) {
-                  echo "<tr class=\"clickable-row\">";
-                    echo "<td data-id=" . $row['id'] .">";
-                      echo $row['title'];
-                    echo "</td>";
-                    echo "<td></td>";
-                  echo "</tr>";
-                }
-              ?>
-              <tr>
-                <td>
-                  <div class="tooltips col-md-12 no-padding">
-                    <input id="job-input" type="text" class="form-control" placeholder="Add a new job ..." name="title">
-                  </div>
-                </td>
-                <td><a id="job-button" onclick="addJob()"><i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i></a></td>
-              </tr>
-            </table>
+          <div class="tooltips col-md-12 no-padding form-item">
+          <div id="choices" class="col-md-12">
+              <table class="table-choice">
+                <?php
+                  $statement = $db->prepare("SELECT id, title FROM Jobs WHERE user_id = :id");
+                  $statement->bindValue(':id', $_SESSION['user_id']);
+                  $result = $statement->execute();
+                  while($row = $result->fetchArray()) {
+                    echo "<tr class=\"clickable-row\">";
+                      echo "<td data-id=" . $row['id'] .">";
+                        echo $row['title'];
+                      echo "</td>";
+                      echo "<td></td>";
+                    echo "</tr>";
+                  }
+                ?>
+                <tr>
+                  <td>
+                    <div class="tooltips col-md-12 no-padding">
+                      <input id="job-input" type="text" class="form-control" placeholder="Add a new job ..." name="title">
+                    </div>
+                  </td>
+                  <td><a id="job-button" onclick="addJob()"><i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i></a></td>
+                </tr>
+              </table>
+            </div>
           </div>
           <div class="col-md-12 form-item">
             <a id="start-button" class="col-md-6 col-md-offset-3 btn btn-primary" onclick="startJob()">Start</a>

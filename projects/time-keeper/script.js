@@ -37,14 +37,24 @@ function startJob() {
     var jobID = $('.active td').data('id');
     var title = $('#title-input').val();
     if (!jobID) {
-      // showToolTip();
+      showToolTip('#choices', 'Please select a job', 'top');
+      $('#choices').addClass('form-invalid');
+      $('#choices').css('border','1px solid rgba(255,0,0,1)');
+      $('td').click(function() {
+        $('.tooltips .form-tooltip-top').fadeOut('fast', function() {
+          $(this).remove();
+        });
+
+        var animationEvent = whichAnimationEvent();
+        $(this).removeClass('form-invalid');
+      })
     } else {
       // Run AJAX
       var xmlhttp = new XMLHttpRequest();
 
       xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-          alert("Start");
+          window.location.href="time-keeper.php";
         }
       }
 

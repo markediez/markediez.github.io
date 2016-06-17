@@ -201,6 +201,38 @@ tr.clickable-row.active {
   animation: glow-out 0.3s;
 }
 
+/* Calendar */
+#calendar {
+  background-color: pink;
+}
+
+.day {
+  border: 1px solid rgb(203,203,203);
+  height: 130px;
+  width: 120px;
+  margin: 2px 1px 2px 1px;
+  background-color: white;
+}
+
+.day-head {
+  border: 1px solid rgb(203,203,203);
+  margin: 8px 1px 0px 1px;
+  height: 30px;
+  width: 120px;
+  background-color: white;
+}
+
+.month {
+  border: 1px solid rgb(203,203,203);
+  margin: 8px 1px 0px 1px;
+  height: 30px;
+  width: 853px;
+  background-color: white;
+}
+
+/* End Calendar */
+
+
 /* Animations */
 @keyframes remove {
     0%   {border: 1px solid rgba(255,0,0,1);}

@@ -58,7 +58,8 @@
       <div id="header" class="row">
         <div class="col-md-12">
           <h1>Time Keeper</h1>
-          <a href="logout.php">Logout</a>
+          <a href="worklog.php" class="col-md-1">Log</a>
+          <a href="logout.php" class="col-md-1">Logout</a>
         </div>
       </div>
 

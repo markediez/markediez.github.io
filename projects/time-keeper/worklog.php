@@ -9,6 +9,15 @@
   <head>
     <?php
       addHeaders("Time Keeper");
+      // Get Jobs
+      $userJobs = array();
+      $query = "SELECT id, title FROM Jobs WHERE user_id = :uid";
+      $statement = $db->prepare($query);
+      $statement->bindValue(':uid', $_SESSION['user_id']);
+      $res = $statement->execute();
+      while($row = $res->fetchArray()) {
+        $userJobs[$row['id']] = $row['title'];
+      }
       $month = "June 2016";
     ?>
   </head>
@@ -40,11 +49,64 @@
             ?>
           </div>
           <?php
+            $start_date = new DateTime('first day of this month');
+            $end_date = new DateTime('last day of this month');
+            $dow =  $start_date->format('D');
+            $end_day = $end_date->format('d');
+            $start_index = 0;
+            while ($start_index < 7) {
+              if(strpos($day[$start_index], $dow) !== false) break;
+              $start_index++;
+            }
+            $start_date->setTime(0,0,0);
+            $end_date->setTime(0,0,0);
+            $start_date = $start_date->format('Y-m-d H:i:s');
+            $end_date = $end_date->format('Y-m-d H:i:s');
+            $query = "SELECT Jobs.title as job_title, WorkLog.title as work_title, WorkLog.start_time, WorkLog.end_time FROM WorkLog INNER JOIN Jobs ON WorkLog.job_id = Jobs.id WHERE Worklog.user_id = :uid AND Worklog.start_time BETWEEN :sd AND :ed ORDER BY WorkLog.start_time ASC";
+            $statement = $db->prepare($query);
+            $statement->bindValue(':uid', $_SESSION['user_id']);
+            $statement->bindValue(':sd', $start_date);
+            $statement->bindValue(':ed', $end_date);
+            $res = $statement->execute();
+
+            $log = array();
+            while($row = $res->fetchArray()) {
+              $day = strtotime($row['start_time']);
+              $day = date('d', $day);
+              $sd = new DateTime($row['start_time']);
+              $ed = new DateTime($row['end_time']);
+              $interval = $ed->diff($sd);
+              $duration = $interval->h + ($interval->i / 60);
+              echo "<br><br>";
+              if(!is_array($log[$day])) {
+                $log[$day] = array();
+              }
+
+              $event = array();
+              $event['job_title'] = $row['job_title'];
+              $event['work_title'] = $row['work_title'];
+              $event['duration'] = $duration;
+              array_push($log[$day], $event);
+            }
+            // Disabled days
+
             for ($i = 1; $i <= 5; $i++) {
               echo '<div class="week col-md-12">';
               for ($j = 1; $j <= 7; $j++) {
-                echo '<div class="day col-md-1">';
-
+                $day_num = 7 * ($i - 1) + $j;
+                $dom = $day_num - $start_index;
+                if($dom <= 0 || $dom  > $end_day) {
+                  echo '<div class="day col-md-1 no-padding disabled">';
+                } else {
+                  echo '<div class="day col-md-1 no-padding">';
+                  echo '<span class="event-date col-md-9 no-padding">' . ($day_num - $start_index) . '</span>';
+                }
+                for ($event = 0; $event < sizeof($log[$dom]); $event++) {
+                  echo '<div class="event col-md-12 no-padding">';
+                  echo '<span class="col-md-8 ">' . $log[$dom][$event]['job_title'] . '</span>';
+                  echo '<span class="col-md-4 ">' . $log[$dom][$event]['duration'] . '</span>';
+                  echo '</div>';
+                }
                 echo '</div>';
               }
               echo '</div>';

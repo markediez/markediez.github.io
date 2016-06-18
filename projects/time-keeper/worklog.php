@@ -18,7 +18,9 @@
       while($row = $res->fetchArray()) {
         $userJobs[$row['id']] = $row['title'];
       }
-      $month = "June 2016";
+      $start_date = new DateTime('first day of this month');
+      $end_date = new DateTime('last day of this month');
+      $month = $start_date->format('F Y');
     ?>
   </head>
   <body>
@@ -49,14 +51,12 @@
             ?>
           </div>
           <?php
-            $start_date = new DateTime('first day of this month');
-            $end_date = new DateTime('last day of this month');
             $dow =  $start_date->format('D');
             $end_day = $end_date->format('d');
-            $start_index = 0;
-            while ($start_index < 7) {
-              if(strpos($day[$start_index], $dow) !== false) break;
-              $start_index++;
+            $start_day = 0;
+            while ($start_day < 7) {
+              if(strpos($day[$start_day], $dow) !== false) break;
+              $start_day++;
             }
             $start_date->setTime(0,0,0);
             $end_date->setTime(0,0,0);
@@ -94,12 +94,12 @@
               echo '<div class="week col-md-12">';
               for ($j = 1; $j <= 7; $j++) {
                 $day_num = 7 * ($i - 1) + $j;
-                $dom = $day_num - $start_index;
+                $dom = $day_num - $start_day;
                 if($dom <= 0 || $dom  > $end_day) {
                   echo '<div class="day col-md-1 no-padding disabled">';
                 } else {
                   echo '<div class="day col-md-1 no-padding">';
-                  echo '<span class="event-date col-md-9 no-padding">' . ($day_num - $start_index) . '</span>';
+                  echo '<span class="event-date col-md-9 no-padding">' . ($day_num - $start_day) . '</span>';
                 }
                 for ($event = 0; $event < sizeof($log[$dom]); $event++) {
                   echo '<div class="event col-md-12 no-padding">';

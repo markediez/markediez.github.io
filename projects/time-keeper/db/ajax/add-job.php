@@ -19,6 +19,17 @@
     if($statement === false) {
       echo "Failure";
     } else {
+      // Check to see if the title already exists
+      $query = "SELECT * FROM Jobs WHERE user_id = :uid AND title = :title";
+      $stmt = $db->prepare($query);
+      $stmt->bindValue(':uid', $uid);
+      $stmt->bindValue(':title', $title);
+      $result = $stmt->execute();
+      $row = $result->fetchArray();
+      if($row !== false) {
+        echo "exists";
+        return;
+      }
       if ($res = $statement->execute() !== false) {
         $query = "SELECT id FROM Jobs WHERE user_id = :uid ORDER BY id DESC";
         $stmt = $db->prepare($query);

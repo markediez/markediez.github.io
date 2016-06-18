@@ -82,7 +82,6 @@ $db = new DBLite();
           $ed = new DateTime($row['end_time']);
           $interval = $ed->diff($sd);
           $duration = $interval->h + ($interval->i / 60);
-          echo "<br><br>";
           if(!is_array($log[$day])) {
             $log[$day] = array();
           }

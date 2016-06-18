@@ -21,7 +21,6 @@ function addJob() {
         } else if(xmlhttp.responseText.indexOf('Invalid') !== -1) {
           window.location.href = "index.php";
         } else {
-          alert(xmlhttp.responseText);
           $('#job-input').addClass('form-invalid');
           $('#job-input').focus();
           showToolTip('#job-input', 'This job already exists!', 'top');

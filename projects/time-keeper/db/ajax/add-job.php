@@ -19,8 +19,14 @@
     if($statement === false) {
       echo "Failure";
     } else {
-      if ($statement->execute() !== false) {
-        echo "true";
+      if ($res = $statement->execute() !== false) {
+        $query = "SELECT id FROM Jobs WHERE user_id = :uid ORDER BY id DESC";
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(':uid', $_SESSION['user_id']);
+        $result = $stmt->execute();
+        $row = $result->fetchArray();
+        $id = $row['id'];
+        echo 'true ' . $id;
       } else {
         echo $db->lastErrorMsg();
       }

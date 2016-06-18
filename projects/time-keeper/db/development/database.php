@@ -37,7 +37,7 @@
       $statement[$index++] = $this->prepare('CREATE TABLE Jobs (
         id INTEGER PRIMARY KEY,
         user_id INT NOT NULL,
-        title TEXT NOT NULL UNIQUE,
+        title TEXT NOT NULL,
         created_at DATETIME NOT NULL,
         updated_at DATETIME NOT NULL
       );');

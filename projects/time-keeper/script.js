@@ -10,7 +10,8 @@ function addJob() {
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         if(xmlhttp.responseText.indexOf('true') !== -1) {
-          $('.table-choice tr:last').before('<tr class="clickable-row"><td>' + job_name + '</td><td></td></tr>');
+          var id = xmlhttp.responseText.substring(xmlhttp.responseText.indexOf(' ') + 1);
+          $('.table-choice tr:last').before('<tr class="clickable-row"><td data-id="'+ id +'">' + job_name + '</td><td></td></tr>');
           $('.clickable-row').click(function() {
             // Remove previous active
             $('.clickable-row.active').removeClass("active");
@@ -20,6 +21,7 @@ function addJob() {
         } else if(xmlhttp.responseText.indexOf('Invalid') !== -1) {
           window.location.href = "index.php";
         } else {
+          alert(xmlhttp.responseText);
           $('#job-input').addClass('form-invalid');
           $('#job-input').focus();
           showToolTip('#job-input', 'This job already exists!', 'top');

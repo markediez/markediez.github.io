@@ -1,24 +1,81 @@
-.row h3 {
+html, body {
+  background-color: #FFFFFF;
+  color: #6F627D;
+  font-family: "Roboto", "Helvetica";
+  padding: 0;
+  margin: 0;
+}
+
+#project {
+  background-color: #FFFEF0;
+}
+
+#contact {
   text-align: center;
-  margin-top: 0px;
-  margin-bottom: 0;
 }
 
-.row span {
-  text-align: center;
+#links {
+  height: 80px;
+  justify-content: space-between;
+  padding-left: 15px;
 }
 
-.banner .text {
-  text-align: right;
-}
-
-.row.card img {
-  opacity: 0.4;
-}
-
-.row.card img:hover {
+#links:hover > *{
   opacity: 1;
-  cursor: pointer;
+  text-decoration: none;
+}
+
+#links a {
+  color: #000000;
+}
+
+#links span {
+  opacity: 0;
+}
+
+#links span a {
+  text-decoration: none;
+}
+
+#links span a:hover {
+  text-decoration: underline;
+}
+
+#links span i {
+  opacity: 0;
+}
+
+#links span.active {
+  opacity: 1;
+}
+
+#links span.active i {
+  opacity: 1;
+}
+
+#side-nav {
+  position: fixed;
+  /*top: 47%;*/
+  height: 100vh;
+  /*background-color: #6F627D;*/
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.icon {
+  padding-right: 10px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-container {
@@ -26,8 +83,25 @@
   flex-wrap: wrap;
   justify-content: center;
   height: 100vh;
+  width: 80%;
+  justify-content: space-between;
 }
 
-.flex-content {
+.flex-center {
+  justify-content: center;
   align-self: center;
+}
+
+.flex-section {
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  margin-left: 20px;
+}
+
+.section-header {
+  font-size: 36px;
+  font-weight: bold;
 }

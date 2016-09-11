@@ -3,52 +3,82 @@
 <head>
 	<meta charset = "UTF-8">
 	<title>Mark Diez</title>
-	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="vendor/font-awesome-4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
-	<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	 <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 </head>
 <body>
 
-	<!-- Temp Flexbox -->
+<div id="side-nav">
+	<div class="full-height flex">
+
+		<div id="links" class="flex-center flex-column flex-space-between">
+				<span class=""><a href="#"><i class="fa fa-caret-down icon"></i>About Me</a></span>
+				<span class="active"><a href="#"><i class="fa fa-caret-down icon"></i>Projects</a></span>
+				<span class=""><a href="#"><i class="fa fa-caret-down icon"></i>Contact Me</a></span>
+		</div>
+
+	</div>
+</div>
+
+<div id="about" class="flex-section">
 	<div class="flex-container">
-		<div class="flex-content">
-			<span>Mark Diez :: Under Construction</span>
+		<div class="flex-center flex">
+
+			<div class="image">
+				<img src="http://placehold.it/500x500"></img>
+			</div>
+			<div class="description flex-center">
+				<p>
+					The quick brown fox jumps over the lazy dog near the riverbank
+				</p>
+			</div>
+
 		</div>
 	</div>
-	<!-- End Temp -->
-	<!-- <div class = "page_container">
-		<div class= "row banner">
-			<div class = "col-6">
-				<img src="http://placehold.it/150x150.png" />
+</div>
+
+<div id="project" class="flex-section">
+	<div class="flex-container">
+		<div class="flex-center flex">
+
+			<div class="image">
+				<img src="http://placehold.it/500x400"></img>
+				<div class="thumbnail">
+					<img src="http://placehold.it/80x80"></img>
+					<img src="http://placehold.it/80x80"></img>
+					<img src="http://placehold.it/80x80"></img>
+					<img src="http://placehold.it/80x80"></img>
+					<img src="http://placehold.it/80x80"></img>
+					<img src="http://placehold.it/80x80"></img>
+				</div>
 			</div>
-			<div class = "col-6 text">
-				<h1>MARK DIEZ</h1>
-				<strong>FRONT-END NINJA</strong>
+			<div class="description">
+				<span class="section-header">Title</span>
+				<p>
+					The quick brown fox jumps over the lazy dog near the riverbank
+				</p>
 			</div>
+
 		</div>
-		<hr>
-		<div class = "row">
-			<img class = "col-12" src="http://placehold.it/500x200.png"/>
+	</div>
+</div>
+
+<div id="contact" class="flex-section">
+	<div class="full-height flex-center flex-column">
+		<span class="section-header">Contact</span>
+		<p>Lorem ipsum cual mal por que de nada wa na koy mabuhat</p>
+		<div class="thumbnail">
+			<img src="http://placehold.it/80x80"></img>
+			<img src="http://placehold.it/80x80"></img>
+			<img src="http://placehold.it/80x80"></img>
+			<img src="http://placehold.it/80x80"></img>
+			<img src="http://placehold.it/80x80"></img>
+			<img src="http://placehold.it/80x80"></img>
 		</div>
-		<div class = "row">
-			<h2 class = "col-12">Featured Work</h2>
-		</div>
-		<div class = "row card">
-				<a href="projects.html"><img class = "col-4" src="http://placehold.it/400x150.png" /></a>
-				<a href="notes.html"><img class = "col-4 center" src="http://placehold.it/400x150.png" /></a>
-				<a href="music.html"><img class = "col-4" src="http://placehold.it/400x150.png" /></a>
-		</div>
-		<div class = "row">
-			<h3 class = "col-4">Projects</h3>
-			<h3 class = "col-4">Notes</h3>
-			<h3 class = "col-4">Music</h3>
-		</div>
-		<div class = "row">
-			<span class="col-4">http://markediez.com/projects.html</span>
-			<span class="col-4">http://markediez.com/notes.html</span>
-			<span class="col-4">http://markediez.com/music.html</span>
-		</div>
-	</div> -->
+	</div>
+</div>
+
 </body>
 </html>

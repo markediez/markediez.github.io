@@ -1,3 +1,9 @@
+function scrollToLink(el, anchor) {
+  $('html, body').animate({
+       scrollTop: $(anchor).offset().top
+  }, 500);
+}
+
 function activateLink(el) {
   $(".active").removeClass("active");
   $(el).parent().addClass("active");

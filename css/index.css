@@ -105,3 +105,15 @@ html, body {
   font-size: 36px;
   font-weight: bold;
 }
+
+.thumbnail {
+  margin-top: 30px;
+}
+
+.thumbnail img {
+  opacity: .5;
+}
+
+.thumbnail img:hover {
+  opacity: 1;
+}

@@ -8,7 +8,7 @@ function scrollToLink(el, anchor) {
 }
 
 function activateLink(el) {
-  $(".active").removeClass("active");
+  $("#links .active").removeClass("active");
   $(el).parent().addClass("active");
 }
 
@@ -31,5 +31,5 @@ $(window).scroll(function() {
 // For the projects section
 // *******************************************************************
 function activateProject(el) {
-  
+
 }

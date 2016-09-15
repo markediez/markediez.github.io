@@ -14,6 +14,16 @@ html, body {
   text-align: center;
 }
 
+#about-image {
+  height: 500px;
+  width: 500px;
+}
+
+#project-image {
+  height: 400px;
+  width: 500px;
+}
+
 #links {
   height: 80px;
   justify-content: space-between;
@@ -99,6 +109,7 @@ html, body {
 
 .description {
   margin-left: 20px;
+  line-height: 20px;
 }
 
 .section-header {
@@ -111,9 +122,22 @@ html, body {
 }
 
 .thumbnail img {
+  width: 80px;
+  height: 80px;
+}
+
+.thumbnail a.active {
+  opacity: 1;
+}
+
+.thumbnail a {
   opacity: .5;
 }
 
-.thumbnail img:hover {
+.thumbnail a:hover {
   opacity: 1;
+}
+
+.thumbnail a{
+  cursor: pointer;
 }

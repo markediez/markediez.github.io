@@ -1,0 +1,33 @@
+{
+  {
+    "title": "Student Application Developer",
+    "start_date": "2016-02-22",
+    "end_date": "",
+    "type": "Work",
+    "company": "UC Davis DSS IT",
+    "description": ""
+  },
+  {
+    "title": "Lead Web Development Intern",
+    "start_date": "2016-02-01",
+    "end_date": "2016-09-01",
+    "type": "Internship",
+    "company": "Paul The Tutor's",
+    "description": ""
+  },
+  {
+    "title": "Website Coordinator",
+    "start_date": "2016-03-01",
+    "end_date": "",
+    "type": "Work",
+    "company": "Evans&DeShazo",
+    "description": ""
+  },
+  {
+    "title": "Android Application Developer",
+    "start_date": "2013-05-01",
+    "end_date": "2014-10-01",
+    "type": "Work",
+    "description": ""
+  }
+}

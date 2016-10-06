@@ -33,8 +33,19 @@ $(window).scroll(function() {
 // *******************************************************************
 // For the projects section
 // *******************************************************************
-function activateProject(el) {
+var projects = [];
 
+function activateProject(el, thumbnail) {
+  var projectsContainer = $("#project");
+  var project = projects[el];
+
+  $(".active", projectsContainer).removeClass("active");
+  $(thumbnail).addClass("active");
+
+  $("#project-image", projectsContainer).attr("src", project.image);
+  $(".section-header", projectsContainer).html(project.title);
+  $(".section-date", projectsContainer).html(project.start_date + " - " + project.end_date);
+  $(".section-description", projectsContainer).html(project.description);
 }
 
 function fetchProjects() {
@@ -50,8 +61,18 @@ function fetchProjects() {
   });
 }
 
-function insertProjects(projects) {
-  console.log(projects);
+function insertProjects(loadedProjects) {
+  projects = loadedProjects;
+
+  var projectsContainer = $("#project");
+
+  // Insert projects dynamically
+  for(var i = 0; i < projects.length; i++) {
+    project = projects[i];
+    $(".thumbnail", projectsContainer).append('<a onClick="activateProject(' + i + ', this)"><img src="'+ project.thumbnail + '"></img></a>');
+  }
+
+  $(".thumbnail").children()[0].click();
 }
 
 // *******************************************************************

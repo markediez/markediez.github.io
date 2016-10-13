@@ -110,6 +110,7 @@ html, body {
 
 .description {
   margin-left: 20px;
+  width: 100%;
 }
 
 .description p {
@@ -151,4 +152,8 @@ html, body {
 
 .thumbnail a{
   cursor: pointer;
+}
+
+.full-width {
+  width: 100%;
 }

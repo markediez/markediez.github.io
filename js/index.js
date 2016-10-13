@@ -42,7 +42,7 @@ function activateProject(el, thumbnail) {
   $(".active", projectsContainer).removeClass("active");
   $(thumbnail).addClass("active");
 
-  $("#project-image", projectsContainer).attr("src", project.image);
+  $("#project-image img", projectsContainer).attr("src", project.image);
   $(".section-header", projectsContainer).html(project.title);
   $(".section-date", projectsContainer).html(project.start_date + " - " + project.end_date);
   $(".section-description", projectsContainer).html(project.description);

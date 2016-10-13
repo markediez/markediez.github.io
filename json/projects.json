@@ -6,7 +6,7 @@
     "start_date": "2016-07-01",
     "end_date": "2016-09-01",
     "type": "Side Project",
-    "description": "",
+    "description": "List Keeper was initially a pre-work submission for CodePath in hopes of participating their Android Bootcamp. I have since expanded the simple todo application to persist template lists for occasional activities like camping. I am currently inspecting firebase and google sheets as a platform to keep the data online; this would open doors for a web-app version.",
     "link": "http://github.com/markediez/listkeeper"
   },
   {

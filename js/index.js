@@ -15,13 +15,10 @@ function activateLink(el) {
 $(window).scroll(function() {
   var projectOffset = $("#project").offset().top;
   var contactOffset = $("#contact").offset().top;
-  var hobbyOffset  = $("#hobby").offset().top;
   var currentScroll = $(this).scrollTop();
 
   if (currentScroll >= contactOffset - (projectOffset / 2) ) {
     activateLink($("#link-contact"));
-  } else if (currentScroll >= hobbyOffset - (projectOffset / 2) ) {
-    activateLink($("#link-hobby"));
   } else if (currentScroll >= projectOffset / 2) {
     activateLink($("#link-project"));
   } else {

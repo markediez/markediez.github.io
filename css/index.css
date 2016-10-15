@@ -18,7 +18,7 @@ html, body {
 }
 
 #contact {
-  background-color: #EEEEEE;
+  background-color: #FFFFFF;
   text-align: center;
 }
 
@@ -39,7 +39,7 @@ html, body {
 }
 
 #links {
-  height: 100px;
+  height: 72px;
   justify-content: space-between;
   padding-left: 15px;
 }

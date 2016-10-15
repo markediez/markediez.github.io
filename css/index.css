@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html, body {
   background-color: #FFFFFF;
   color: #6F627D;
@@ -137,9 +144,11 @@ html, body {
 
 .thumbnail {
   margin-top: 30px;
+  margin-left: -5px;
 }
 
 .thumbnail img {
+  padding-left: 5px;
   width: 80px;
   height: 80px;
 }
@@ -149,6 +158,7 @@ html, body {
 }
 
 .thumbnail a {
+  /*padding-left: 5px;*/
   opacity: .5;
 }
 

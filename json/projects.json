@@ -2,7 +2,7 @@
   {
     "title": "List Keeper",
     "image": "http://i.imgur.com/C4vqUxL.gif",
-    "thumbnail": "https://cnet4.cbsistatic.com/hub/i/2011/10/27/a66dfbb7-fdc7-11e2-8c7c-d4ae52e62bcc/android-wallpaper5_2560x1600_1.jpg",
+    "thumbnail": "http://icons.iconarchive.com/icons/martz90/circle/512/android-icon.png",
     "start_date": "2016-07-01",
     "end_date": "2016-09-01",
     "type": "Side Project",
@@ -11,8 +11,8 @@
   },
   {
     "title": "Time Keeper",
-    "image": "",
-    "thumbnail": "",
+    "image": "http://i.imgur.com/AnTZ2Km.gif",
+    "thumbnail": "http://timekeeper.markediez.me/svg/logo.svg",
     "start_date": "2016-07-01",
     "end_date": "2016-09-01",
     "type": "Side Project",
@@ -22,7 +22,7 @@
   {
     "title": "My Pantry",
     "image": "",
-    "thumbnail": "",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Terminalicon2.png",
     "start_date": "2016-01-01",
     "end_date": "2016-02-01",
     "description": "Using Java, I formulated a console-based program to generate a shopping list. The user stores recipes through the program or a file then picks recipes he or she wants to cook. Once the user is done, the program will generate a .txt file containing the shopping list.",
@@ -30,8 +30,8 @@
   },
   {
     "title": "Wasteless",
-    "image": "",
-    "thumbnail": "",
+    "image": "https://lh3.ggpht.com/UnlUsSJrfEf9dv81NYaFa4MrFjvOP8gx4TtM02D1_jSOlTFNy64kl5lRGtYODH3ZDg=h900-rw",
+    "thumbnail": "https://lh3.ggpht.com/MOKbTlfN4hUwsxw2DtSU9x_K0i4H_c-uCSXeQZqC4oj_1EBTXyZfHN99WKp9CbDMlys=w300-rw",
     "start_date": "2014-12-01",
     "end_date": "2015-01-01",
     "description": "Designed and implemented a simple android application to keep track of perishable food. Food items are manually added and stored at SharedPreference using GSON library. Notifications are sent when the item is within a week of its lifespan",
@@ -40,7 +40,7 @@
   {
     "title": "Finance",
     "image": "",
-    "thumbnail": "",
+    "thumbnail": "https://duke.kenai.com/misc/SwingingDuke.png",
     "start_date": "2014-06-01",
     "end_date": "2014-07-01",
     "description": "Created a simple gui-based java application to keep track of my expenses. It separates it by day, week, month, and year. I used Java Swing to create the GUI and SQLite to store the relational database.",

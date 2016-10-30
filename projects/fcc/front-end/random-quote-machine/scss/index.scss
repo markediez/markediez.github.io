@@ -1,7 +1,27 @@
-$primary-color: #283593;
+$primary-color: #424242;
 
 .row {
   #random_quote {
     color: $primary-color;
+
+    blockquote {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      justify-content: center;
+      min-height: 300px;
+
+      #action {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        align-self: flex-end;
+      }
+
+      * {
+        // width: 100%;
+      }
+    }
   }
 }

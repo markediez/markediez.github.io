@@ -1,4 +1,15 @@
 .row #random_quote {
-  color: #283593; }
+  color: #424242; }
+  .row #random_quote blockquote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px; }
+    .row #random_quote blockquote #action {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      align-self: flex-end; }
 
 /*# sourceMappingURL=index.css.map */

@@ -15,10 +15,13 @@
 
     <div id="action">
       <button onclick="changeQuote()">Get A New Quote</button>
-      <button>Send a Tweet</button>
+      <button onclick="tweet()">Send a Tweet</button>
     </div>
 
     <script type="text/javascript">
+      $(document).ready(function() {
+        changeQuote();
+      });
 
       function changeQuote() {
         var newQuote = {};
@@ -39,12 +42,15 @@
         });
 
         // Change current quote to new quote
-        console.log(newQuote);
         $("#random_quote blockquote").html(newQuote["content"]);
         $("#random_quote span").html(newQuote["title"])
       }
-      function getQuote() {
+      function tweet(quote, author) {
+        var quote = $("#random_quote blockquote p").html() + " -" + $("#random_quote span").html()
+        var url = "https://twitter.com/intent/tweet?hashtags=freecodecamp,quotes&text=";
+        url += quote;
 
+        window.open(url,'_blank');
       }
     </script>
   </body>

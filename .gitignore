@@ -1,2 +1,5 @@
 # uncessary files
 *.pdf
+
+# sass
+.sass-cache/

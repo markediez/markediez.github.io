@@ -1,6 +1,17 @@
 $(document).ready(function() {
   changeQuote();
+  changeDate();
 });
+
+function changeDate() {
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  var currDate = new Date(Date.now());
+  var day = currDate.getDay() < 10 ? "0" + currDate.getDay() : currDate.getDay();
+  
+  $("#curr_date .h2").html(months[currDate.getMonth()]);
+  $("#curr_date #day").html(day);
+}
 
 function changeQuote() {
   var newQuote = {};

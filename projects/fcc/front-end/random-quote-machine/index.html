@@ -10,27 +10,30 @@
     <link rel="stylesheet" href="css/bootstrap-overwrite.css" />
   </head>
   <body>
-    <div class="row">
-      <div id="random_quote" class="col-md-offset-4 col-md-4">
-        <blockquote>
-          <div class="quote">I am a unicorn</div>
-          <small class="author">Everyone</small>
-        </blockquote>
-        <div id="action">
-          <button onclick="changeQuote()">Get A New Quote</button>
-          <button onclick="tweet()">Send a Tweet</button>
+    <div id="container">
+
+      <div class="row">
+        <div id="random_quote" class="col-md-offset-4 col-md-4">
+          <blockquote>
+            <div class="quote">I am a unicorn</div>
+            <small class="author">Everyone</small>
+          </blockquote>
+          <div id="action">
+            <button onclick="changeQuote()">Get A New Quote</button>
+            <button onclick="tweet()">Send a Tweet</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div id="task_container" class="col-md-offset-4 col-md-4">
-        <div id="content">
-          <h4 class="title" class="big">What are your tasks today?</h4>
-        </div>
-        <div id="curr_date">
-          <span class="h2">December</span>
-          <span id="day">08</span>
+      <div class="row">
+        <div id="task_container" class="col-md-offset-4 col-md-4">
+          <div id="content">
+            <h4 class="title" class="big">What are your tasks today?</h4>
+          </div>
+          <div id="curr_date">
+            <span class="h2">December</span>
+            <span id="day">08</span>
+          </div>
         </div>
       </div>
     </div>

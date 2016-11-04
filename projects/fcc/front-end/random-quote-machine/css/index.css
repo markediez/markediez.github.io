@@ -38,6 +38,17 @@
         height: 100%;
         width: 100%;
         color: #424242; }
+        #container .row #task_container #content .task {
+          display: flex;
+          padding: 10px;
+          border: 1px solid #C1C1C1;
+          border-radius: 5px;
+          margin-top: 5px; }
+          #container .row #task_container #content .task input {
+            margin: 0 5px 0 0;
+            align-self: center; }
+          #container .row #task_container #content .task span {
+            font-size: 20px; }
       #container .row #task_container #curr_date {
         text-align: right;
         color: #C1C1C1; }

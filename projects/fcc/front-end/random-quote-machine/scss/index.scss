@@ -50,7 +50,23 @@ $border-color: #EEEEEE;
       #content {
         height: 100%;
         width: 100%;
-        color: $primary-color
+        color: $primary-color;
+
+        .task {
+          display: flex;
+          padding: 10px;
+          border: 1px solid $secondary-color;
+          border-radius: 5px;
+          margin-top: 5px;
+
+          input {
+            margin: 0 5px 0 0;
+            align-self: center;
+          }
+          span {
+            font-size: 20px;
+          }
+        }
       }
 
       #curr_date {

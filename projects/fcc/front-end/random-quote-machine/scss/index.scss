@@ -29,9 +29,8 @@ $border-color: #EEEEEE;
 
       #action {
         position: absolute;
-        bottom: 0;
-        right: 0;
-        align-self: flex-end;
+        bottom: 3%;
+        right: 3%;
       }
     }
   }
@@ -57,14 +56,13 @@ $border-color: #EEEEEE;
           padding: 10px;
           border: 1px solid $secondary-color;
           border-radius: 5px;
-          margin-top: 5px;
+          margin-top: 8px;
+          font-size: 16px;
+          width: 100%;
 
           input {
             margin: 0 5px 0 0;
             align-self: center;
-          }
-          span {
-            font-size: 20px;
           }
         }
       }

@@ -1,0 +1,35 @@
+$font-family: "Slabo 27px", "Roboto", "Helvetica";
+
+$background-color: #FFFFFF;
+$header-link-color: #000000;
+$default-color: #000000;
+
+$tag-default-border: 1px solid #949494;
+$tag-default-fill: #ADADAD;
+$tag-default-color: #FFFFFF;
+
+$tag-link-fill-1: #1CAD6A;
+$tag-link-fill-2: #1CA7AD;
+$tag-link-fill-3: #AD1C1C;
+$tag-link-border-1: 1px solid #18955B;
+$tag-link-border-2: 1px solid #189095;
+$tag-link-border-3: 1px solid #951818;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: $background-color;
+  color: $default-color;
+  font-family: $font-family;
+  padding: 0;
+  margin: 0;
+}
+
+#top-nav {
+  color: $header-link-color;
+}

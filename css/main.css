@@ -50,6 +50,8 @@ html, body {
   justify-content: space-between;
   width: 100%;
   text-align: center; }
+  .tag-container a.link {
+    text-decoration: none; }
   .tag-container .tag {
     background-color: #ADADAD;
     border: 1px solid #949494;

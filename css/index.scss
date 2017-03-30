@@ -30,6 +30,49 @@ html, body {
   margin: 0;
 }
 
-#top-nav {
-  color: $header-link-color;
+#container {
+  width: 100%;
+  height: 100vh;
 }
+
+#nav-container {
+  display: flex;
+  height: 10%;
+  width: 100%;
+  color: $header-link-color;
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 48px;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  a {
+    color: $header-link-color;
+    text-decoration: none;
+    align-self: center;
+
+    &:hover {
+      border-bottom: 3px solid #757575;
+    }
+
+    &:active {
+      color: #757575;
+      border-bottom: 3px solid #000000;
+    }
+
+    &.active {
+      border-bottom: 3px solid #000000;
+    }
+
+    span {
+      border-radius: 5px;
+      padding: 10px;
+    }
+  } // a
+} // #nav-container

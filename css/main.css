@@ -1,84 +1,83 @@
-/** {
-  border: 1px solid red !important;
-}*/
-
+/*
+ * Holds global CSS, think of application.css from rails
+ */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-* {
-  font-family: 'Lato', sans-serif;
-}
+html, body {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: "Slabo 27px", "Roboto", "Helvetica";
+  padding: 0;
+  margin: 0; }
 
-.page_container {
-  width: 960px;
-  margin: 0 auto;
-  /*padding: 15px;
-  margin: 5px auto;*/
-}
-
-.row {
+#container {
   width: 100%;
+  height: 100vh; }
+
+#nav-container {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.row.card img {
-  width: 310px;
-  height: 150px;
-}
-
-.row.card {
-  justify-content: space-between;
-}
-
-.col-1 {
-  width: 8.33%;
-}
-
-.col-2 {
-  width: 16.66%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.33%;
-}
-
-.col-5 {
-  width: 41.66%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-7 {
-  width: 58.33%;
-}
-
-.col-8 {
-  width: 66.66%;
-}
-
-.col-9 {
-  width: 75%;
-}
-
-.col-10 {
-  width: 83.33%;
-}
-
-.col-11 {
-  width: 91.66%;
-}
-
-.col-12 {
+  height: 10%;
   width: 100%;
-}
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between; }
+  #nav-container img {
+    height: 100%;
+    width: auto; }
+  #nav-container a {
+    color: #000000;
+    text-decoration: none;
+    align-self: center; }
+    #nav-container a:hover {
+      border-bottom: 3px solid #757575; }
+    #nav-container a:active {
+      color: #757575;
+      border-bottom: 3px solid #000000; }
+    #nav-container a.active {
+      border-bottom: 3px solid #000000; }
+    #nav-container a span {
+      padding: 10px; }
+
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center; }
+  .tag-container .tag {
+    background-color: #ADADAD;
+    border: 1px solid #949494;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 16px; }
+  .tag-container .link {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 36px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 36px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 36px -5px rgba(0, 0, 0, 0.75); }
+  .tag-container .link-1 {
+    background-color: #1CAD6A;
+    border: 1px solid #18955B; }
+  .tag-container .link-2 {
+    background-color: #1CA7AD;
+    border: 1px solid #189095; }
+  .tag-container .link-3 {
+    background-color: #AD1C1C;
+    border: 1px solid #951818; }
+
+.text-medium {
+  font-size: 40px; }
+
+.text-large {
+  font-size: 48px; }
+
+.text-xlarge {
+  font-size: 64px; }
+
+/*# sourceMappingURL=main.css.map */

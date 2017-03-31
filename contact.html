@@ -4,7 +4,7 @@
 	<meta charset = "UTF-8">
 	<title>Mark Diez</title>
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/contact.css">
 	<link rel="stylesheet" href="vendor/font-awesome-4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
@@ -18,22 +18,30 @@
 	<!-- navigation div -->
 	<div id="nav-container" class="text-large">
 		<img src="logo.png"></img>
-		<a href="index.html" class="active"><span>About</span></a>
+		<a href="index.html"><span>About</span></a>
 		<a href="#"><span>Projects</span></a>
 		<a href="#"><span>Blog</span></a>
-		<a href="contact.html"><span>Contact</span></a>
+		<a href="contact.html" class="active"><span>Contact</span></a>
 	</div>
 	<!-- End navigation div -->
 
 	<!-- content div -->
 	<div id="content">
-		<div>
-			<span class="text-xlarge">I am a software developer</span>
-			<div class="tag-container">
-				<a class="tag link link-1 text-medium" href="https://github.com/markediez/" target="_blank"># github</a>
-				<a class="tag link link-2 text-medium" href="https://linkedin.com/in/markediez" target="_blank"># linkedin</a>
-				<a class="tag link link-3 text-medium" href="https://www.dropbox.com/s/9r6t5wgj9cdpxxm/Resume0301.pdf?dl=0" target="_blank"># resume</a>
-			</div>
+    <div class="form">
+      <form>
+        <input type="text" placeholder="Name" class="text-large">
+        <input type="text" placeholder="Email" class="text-large">
+        <textarea type="text" placeholder="Message" class="text-large"></textarea>
+      </form>
+    </div>
+
+    <div class="tag-container send">
+      <a class="tag link link-3 text-medium" href="#" target="_blank"># send</a>
+    </div>
+
+		<div class="tag-container">
+			<a class="tag link link-1 text-medium" href="https://github.com/markediez/" target="_blank"># github</a>
+			<a class="tag link link-2 text-medium" href="https://linkedin.com/in/markediez" target="_blank"># linkedin</a>
 		</div>
 	</div>
 	<!-- End content div -->

@@ -21,6 +21,7 @@ $tag-link-border-2: 1px solid #189095;
 $tag-link-border-3: 1px solid #951818;
 
 $padding: 10px;
+$light-border: #757575;
 
 * {
   -webkit-box-sizing: border-box;
@@ -64,11 +65,11 @@ html, body {
     align-self: center;
 
     &:hover {
-      border-bottom: 3px solid #757575;
+      border-bottom: 3px solid $light-border;
     }
 
     &:active {
-      color: #757575;
+      color: $light-border;
       border-bottom: 3px solid #000000;
     }
 

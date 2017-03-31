@@ -16,6 +16,19 @@ $sub-title-color: #000000;
 
   & > * {
     margin-top: $space;
+    width: 90%;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .tag-container {
+    margin-top: 0 !important;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .tag {
+      margin: 5px;
+    }
   }
 }
 

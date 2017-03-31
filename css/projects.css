@@ -4,7 +4,16 @@
   width: 100%;
   padding-bottom: 32px; }
   #content > * {
-    margin-top: 32px; }
+    margin-top: 32px;
+    width: 90%;
+    align-self: center;
+    justify-content: center; }
+  #content .tag-container {
+    margin-top: 0 !important;
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+    #content .tag-container .tag {
+      margin: 5px; }
 
 .project {
   display: flex;

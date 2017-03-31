@@ -94,6 +94,12 @@ html, body {
     &.link {
       text-decoration: none;
     }
+
+    &.link:active {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
   }
 
   .tag {

@@ -1,6 +1,5 @@
 var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var projects = [];
-var oldState = undefined;
 
 $(document).ready(function() {
   fetchProjects();
@@ -92,8 +91,46 @@ function dateToString(date) {
 function projectView(key) {
   // Save current view state
   oldState = {};
-  oldState.content = $("#content");
+  oldState.content = $("#content").html();
 
-  // Change view state
-  console.log(key);
+  // Transition
+  $("#content").fadeOut(500, function() {
+    // Change view state
+    var project = projects[key];
+    var title = '<span class="title text-xlarge">' + project.title + '</span>';
+    var description = '<p class="text-medium">' + project.description + '</p>';
+
+    var tags = '<div class="tag-container">';
+    for (var i = 0; i < project.tags.length; i++) {
+      tags += '<span class="tag text-small">' + '# ' + project.tags[i] + '</span>';
+    }
+    tags += '</div>';
+
+    var nav = '<div class="tag-container nav">';
+    nav += '<a id="back" class="tag link link-3 text-small no-select"># back</a>';
+    if (project.github != false) {
+      nav += '<a href="' + project.github + '"class="tag link link-1 text-small no-select" target="_blank"># github</a>';
+    }
+    if (project.published != false) {
+      nav += '<a href="' + project.published + '"class="tag link link-2 text-small no-select" target="_blank"># published</a>';
+    }
+    nav += '</div>';
+
+    $("#content").html('<div class="project selected"></div>' + title + tags + description + nav);
+
+    // Go back go list view
+    $("#back").on("click", function() {
+      $(this).unbind("click");
+
+      $("#content").fadeOut(500, function() {
+        $("#content").html("");
+        insertProjects(projects);
+        $("#content").fadeIn(500);
+      });
+    });
+
+    // Show
+    $("#content").fadeIn(500);
+  });
+
 }

@@ -40,6 +40,12 @@ function fetchProjects() {
 function insertProjects(result) {
   projects = result;
   // sort by start date desc
+  projects.sort(function(a, b) {
+    dateA = new Date(a.start_date);
+    dateB = new Date(b.start_date);
+
+    return dateA.getTime() < dateB.getTime();
+  });
 
   // show each project
   for (var key in projects) {
@@ -56,7 +62,6 @@ function insertProjects(result) {
       projectView( $(this).data("key") );
     });
   });
-
 }
 
 /**
@@ -89,10 +94,6 @@ function dateToString(date) {
  * @param key - key of project from associative array
  */
 function projectView(key) {
-  // Save current view state
-  oldState = {};
-  oldState.content = $("#content").html();
-
   // Transition
   $("#content").fadeOut(500, function() {
     // Change view state

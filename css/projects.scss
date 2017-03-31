@@ -25,9 +25,10 @@ $sub-title-color: #000000;
     margin-top: 0 !important;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-left: -10px;
 
     .tag {
-      margin: 5px;
+      margin: 10px;
     }
   }
 }
@@ -63,6 +64,12 @@ $sub-title-color: #000000;
   }
 
   &:active {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  &.selected {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;

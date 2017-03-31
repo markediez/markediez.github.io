@@ -17,7 +17,7 @@ $outline: 3px solid #AD1C1C;
 .form {
   height: 85%;
 
-  // Google Chrome iPad 
+  // Google Chrome iPad
   @media screen and (min-width: 768px) {
     height: 80%;
   }
@@ -78,6 +78,75 @@ $outline: 3px solid #AD1C1C;
     display: flex;
     .tag {
       width: 100%;
+    }
+  }
+}
+
+
+@media all and (orientation:landscape) {
+  #content {
+    height: auto;
+  }
+}
+
+@media all and (min-width: 640px) and (orientation:landscape) {
+  #content {
+    align-items: center;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    form {
+      width: 80%;
+      height: 100%;
+      align-self: center;
+      padding: $space;
+
+    //   & > *:not(:first-child) {
+    //     margin-top: 5%;
+    //   }
+    //
+    //   & > *:focus {
+    //     outline: none;
+    //     border: $outline;
+    //     border-radius: $border-radius;
+    //   }
+    //
+    //   input[type=text] {
+    //     display: block;
+    //     width: 100%;
+    //     padding: $space;
+    //     border: $border;
+    //     border-radius: $border-radius;
+    //
+    //     &:focus {
+    //       outline: none;
+    //       border: $outline;
+    //       border-radius: $border-radius;
+    //     }
+    //   }
+    //
+      textarea {
+        height: 300px;
+      }
+    }
+  }
+  //
+  .tag-container {
+    padding: $space;
+    justify-content: flex-end;
+    width: 80%;
+
+    & > .tag:nth-child(2) {
+      margin-left: $space;
+    }
+
+    &.send {
+      display: flex;
+      .tag {
+        width: 100%;
+      }
     }
   }
 }

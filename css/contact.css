@@ -53,4 +53,34 @@
     .tag-container.send .tag {
       width: 100%; }
 
+@media all and (orientation: landscape) {
+  #content {
+    height: auto; } }
+@media all and (min-width: 640px) and (orientation: landscape) {
+  #content {
+    align-items: center; }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+    .form form {
+      width: 80%;
+      height: 100%;
+      align-self: center;
+      padding: 16px; }
+      .form form textarea {
+        height: 300px; }
+
+  .tag-container {
+    padding: 16px;
+    justify-content: flex-end;
+    width: 80%; }
+    .tag-container > .tag:nth-child(2) {
+      margin-left: 16px; }
+    .tag-container.send {
+      display: flex; }
+      .tag-container.send .tag {
+        width: 100%; } }
+
 /*# sourceMappingURL=contact.css.map */

@@ -160,3 +160,13 @@ html, body {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
+
+@media screen and (min-width: 640px) and (orientation: landscape) {
+  .text-medium {
+    font-size: 24px;
+  }
+
+  .text-large {
+    font-size: 28px;
+  }
+}

@@ -46,6 +46,7 @@ html, body {
 #nav-container {
   display: flex;
   height: 10%;
+  min-height: 100px;
   width: 100%;
   color: $header-link-color;
   border-bottom: 1px solid #000000;
@@ -168,5 +169,9 @@ html, body {
 
   .text-large {
     font-size: 28px;
+  }
+
+  .text-xlarge {
+    font-size: 48px;
   }
 }

@@ -21,6 +21,7 @@ html, body {
 #nav-container {
   display: flex;
   height: 10%;
+  min-height: 100px;
   width: 100%;
   color: #000000;
   border-bottom: 1px solid #000000;
@@ -109,6 +110,9 @@ html, body {
     font-size: 24px; }
 
   .text-large {
-    font-size: 28px; } }
+    font-size: 28px; }
+
+  .text-xlarge {
+    font-size: 48px; } }
 
 /*# sourceMappingURL=main.css.map */

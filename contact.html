@@ -28,15 +28,15 @@
 	<!-- content div -->
 	<div id="content">
     <div class="form">
-      <form>
-        <input type="text" placeholder="Name" class="text-large">
-        <input type="text" placeholder="Email" class="text-large">
-        <textarea type="text" placeholder="Message" class="text-large"></textarea>
+      <form action="https://formspree.io/markediez+web@gmail.com" method="POST" >
+        <input type="text" placeholder="Name" class="text-large" name="Name">
+        <input type="text" placeholder="Email" class="text-large" name="Email">
+        <textarea type="text" placeholder="Message" class="text-large" name="Content"></textarea>
       </form>
     </div>
 
     <div class="tag-container send">
-      <a class="tag link link-3 text-medium" href="#" target="_blank"># send</a>
+      <a class="tag link link-3 text-medium no-select"># send</a>
     </div>
 
 		<div class="tag-container">
@@ -49,6 +49,6 @@
 <!-- End container div -->
 
 <!-- Load customs scripts after page load -->
-<script src="js/index.js"></script>
+<script src="js/contact.js"></script>
 </body>
 </html>

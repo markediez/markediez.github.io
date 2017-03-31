@@ -26,6 +26,7 @@ $sub-title-color: #000000;
   justify-content: center;
   width: 90%;
   height: 620px;
+  text-decoration: none;
   border: $project-border;
   background-color: $project-fill;
   border-radius: $border-radius;
@@ -46,5 +47,16 @@ $sub-title-color: #000000;
     width: 100%;
     text-align: center;
     align-self: center;
+  }
+
+  &:active {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  &:active > .title {
+    font-size: 100px;
+    background-color: $title-fill;
   }
 }

@@ -1,88 +1,59 @@
 /*
- * Holds global CSS, think of application.css from rails
- */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box; }
+Error: Invalid CSS after ".no": expected selector, was "=select"
+        on line 148 of css/main.scss
 
-html, body {
-  background-color: #FFFFFF;
-  color: #000000;
-  font-family: "Slabo 27px", "Roboto", "Helvetica";
-  padding: 0;
-  margin: 0; }
+143: .text-xlarge {
+144:   font-size: 64px;
+145: }
+146: 
+147: // http://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting-using-css
+148: .no=select {
+149:   -webkit-touch-callout: none; /* iOS Safari *\/
+150:     -webkit-user-select: none; /* Safari *\/
+151:      -khtml-user-select: none; /* Konqueror HTML *\/
+152:        -moz-user-select: none; /* Firefox *\/
+153:         -ms-user-select: none; /* Internet Explorer/Edge *\/
 
-#container {
-  width: 100%;
-  height: 100vh; }
-
-#nav-container {
-  display: flex;
-  height: 10%;
-  width: 100%;
-  color: #000000;
-  border-bottom: 1px solid #000000;
-  padding: 10px;
-  flex-direction: row;
-  justify-content: space-between; }
-  #nav-container img {
-    height: 100%;
-    width: auto; }
-  #nav-container a {
-    color: #000000;
-    text-decoration: none;
-    align-self: center; }
-    #nav-container a:hover {
-      border-bottom: 3px solid #757575; }
-    #nav-container a:active {
-      color: #757575;
-      border-bottom: 3px solid #000000; }
-    #nav-container a.active {
-      border-bottom: 3px solid #000000; }
-    #nav-container a span {
-      padding: 10px; }
-
-.tag-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  text-align: center; }
-  .tag-container a.link {
-    text-decoration: none; }
-  .tag-container .tag {
-    background-color: #ADADAD;
-    border: 1px solid #949494;
-    border-radius: 10px;
-    color: #FFFFFF;
-    padding: 16px; }
-  .tag-container .link {
-    cursor: pointer;
-    -webkit-box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.75); }
-  .tag-container .link-1 {
-    background-color: #1CAD6A;
-    border: 1px solid #18955B; }
-  .tag-container .link-2 {
-    background-color: #1CA7AD;
-    border: 1px solid #189095; }
-  .tag-container .link-3 {
-    background-color: #AD1C1C;
-    border: 1px solid #951818; }
-
-.text-small {
-  font-size: 32px; }
-
-.text-medium {
-  font-size: 40px; }
-
-.text-large {
-  font-size: 48px; }
-
-.text-xlarge {
-  font-size: 64px; }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+css/main.scss:148
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/scss/static_parser.rb:21:in `parse_selector'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:427:in `visit_rule'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Users/MarkDiez/.rvm/gems/ruby-2.3.1/gems/sass-3.4.23/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \".no\": expected selector, was \"=select\"\A         on line 148 of css/main.scss\A \A 143: .text-xlarge {\A 144:   font-size: 64px;\A 145: }\A 146: \A 147: // http://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting-using-css\A 148: .no=select {\A 149:   -webkit-touch-callout: none; /* iOS Safari */\A 150:     -webkit-user-select: none; /* Safari */\A 151:      -khtml-user-select: none; /* Konqueror HTML */\A 152:        -moz-user-select: none; /* Firefox */\A 153:         -ms-user-select: none; /* Internet Explorer/Edge */"; }

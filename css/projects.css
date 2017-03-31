@@ -13,6 +13,7 @@
   justify-content: center;
   width: 90%;
   height: 620px;
+  text-decoration: none;
   border: 3px solid #949494;
   background-color: #FFFFFF;
   border-radius: 10px;
@@ -30,5 +31,12 @@
     width: 100%;
     text-align: center;
     align-self: center; }
+  .project:active {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  .project:active > .title {
+    font-size: 100px;
+    background-color: #757575; }
 
 /*# sourceMappingURL=projects.css.map */

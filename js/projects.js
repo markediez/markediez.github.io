@@ -1,5 +1,6 @@
 var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var projects = [];
+var oldState = undefined;
 
 $(document).ready(function() {
   fetchProjects();
@@ -43,19 +44,28 @@ function insertProjects(result) {
 
   // show each project
   for (var key in projects) {
-    $("#content").append(objectToProjectThumbnail(projects[key]));
+    $("#content").append(objectToProjectThumbnail(projects[key], key));
   }
 
   $(".project").each(function() {
-    $(".title", this).css("background-color", getCSSColor())
+    // Randomize background color of project titles
+    $(".title", this).css("background-color", getCSSColor());
+    $(this).css("cursor", "pointer");
+
+    // Add event listeners for each project
+    $(this).on("click", function() {
+      projectView( $(this).data("key") );
+    });
   });
+
 }
 
 /**
  * Converts a project in JSON form to HTML form
  * @param project - a single project object
+ * @param key - key of project in projects associative array
  */
-function objectToProjectThumbnail(project) {
+function objectToProjectThumbnail(project, key) {
   var dateRange = dateToString(project.start_date) + " - ";
   if (!project.end_date) {
     dateRange += " Present";
@@ -63,10 +73,27 @@ function objectToProjectThumbnail(project) {
     dateRange += dateToString(project.end_date);
   }
 
-  return '<div class="project">  <span class="title text-xlarge">' + project.title  + '</span> <span class="sub-title text-small">' + dateRange + '</span> </div>';
+  return '<a class="project" data-key="' + key + '">  <span class="title text-xlarge no-select">' + project.title  + '</span> <span class="sub-title text-small">' + dateRange + '</span> </a>';
 }
 
+/**
+ * Returns a date string with '<full-month> <full-year>' format
+ * @param date - a valid value for Date constructor
+ */
 function dateToString(date) {
   date = new Date(date);
   return monthNames[date.getMonth()] + " " + date.getFullYear();
  }
+
+/**
+ * Manipulates the DOM to the project selected view
+ * @param key - key of project from associative array
+ */
+function projectView(key) {
+  // Save current view state
+  oldState = {};
+  oldState.content = $("#content");
+
+  // Change view state
+  console.log(key);
+}

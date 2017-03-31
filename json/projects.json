@@ -1,49 +1,57 @@
 [
   {
     "title": "List Keeper",
-    "image": "http://i.imgur.com/C4vqUxL.gif",
-    "thumbnail": "http://icons.iconarchive.com/icons/martz90/circle/512/android-icon.png",
+    "images": ["http://i.imgur.com/C4vqUxL.gif"],
     "start_date": "2016-07-01",
     "end_date": "2016-09-01",
-    "type": "Side Project",
+    "status": "Inactive",
+    "tags": ["android", "java", "sqlite"],
     "description": "List Keeper was initially a pre-work submission for CodePath in hopes of participating their Android Bootcamp. I have since expanded the simple todo application to persist template lists for occasional activities like camping. I am currently inspecting firebase and google sheets as a platform to keep the data online; this would open doors for a web-app version.",
-    "link": "http://github.com/markediez/listkeeper"
+    "github": "http://github.com/markediez/listkeeper",
+    "published": false
   },
   {
     "title": "Time Keeper",
-    "image": "http://i.imgur.com/AnTZ2Km.gif",
-    "thumbnail": "http://timekeeper.markediez.me/svg/logo.svg",
+    "images": ["http://i.imgur.com/AnTZ2Km.gif"],
     "start_date": "2016-07-01",
     "end_date": "2016-09-01",
-    "type": "Side Project",
+    "status": "Partially Active",
+    "tags": ["html", "css", "javascript", "jquery", "ajax", "php", "mysql"],
     "description": "Designed and implemented a web application to keep track of work done. It employed JavaScript, jQuery, HTML, CSS, and BootStrap in the front-end while using PHP and MySQL for the back-end.",
-    "link": "http://timekeeper.markediez.me"
+    "github": "https://github.com/markediez/time-keeper",
+    "published": "http://timekeeper.markediez.me"
   },
   {
     "title": "My Pantry",
-    "image": "http://i.imgur.com/n1R7E9v.gif",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Terminalicon2.png",
+    "images": ["http://i.imgur.com/n1R7E9v.gif"],
     "start_date": "2016-01-01",
     "end_date": "2016-02-01",
+    "status": "Inactive",
+    "tags": ["java"],
     "description": "Using Java, I formulated a console-based program to generate a shopping list. The user stores recipes through the program or a file then picks recipes he or she wants to cook. Once the user is done, the program will generate a .txt file containing the shopping list.",
-    "link": "https://github.com/markediez/MyPantry"
+    "github": "https://github.com/markediez/MyPantry",
+    "published": false
   },
   {
     "title": "Wasteless",
-    "image": "https://lh3.ggpht.com/UnlUsSJrfEf9dv81NYaFa4MrFjvOP8gx4TtM02D1_jSOlTFNy64kl5lRGtYODH3ZDg=h900-rw",
-    "thumbnail": "https://lh3.ggpht.com/MOKbTlfN4hUwsxw2DtSU9x_K0i4H_c-uCSXeQZqC4oj_1EBTXyZfHN99WKp9CbDMlys=w300-rw",
+    "images": ["https://lh3.ggpht.com/UnlUsSJrfEf9dv81NYaFa4MrFjvOP8gx4TtM02D1_jSOlTFNy64kl5lRGtYODH3ZDg=h900-rw"],
     "start_date": "2014-12-01",
     "end_date": "2015-01-01",
+    "status": "Inactive",
+    "tags": ["android", "java", "gson"],
     "description": "Designed and implemented a simple android application to keep track of perishable food. Food items are manually added and stored at SharedPreference using GSON library. Notifications are sent when the item is within a week of its lifespan",
-    "link": "https://play.google.com/store/apps/details?id=net.codelets.wasteless"
+    "github": "https://github.com/markediez/wasteless",
+    "published": "https://play.google.com/store/apps/details?id=net.codelets.wasteless"
   },
   {
     "title": "Finance",
-    "image": "http://i.imgur.com/JLuIqoo.gif",
-    "thumbnail": "https://duke.kenai.com/misc/SwingingDuke.png",
+    "images": ["http://i.imgur.com/JLuIqoo.gif"],
     "start_date": "2014-06-01",
     "end_date": "2014-07-01",
+    "status": "Inactive",
+    "tags": ["java", "java swing", "sqlite"],
     "description": "Created a simple gui-based java application to keep track of my expenses. It separates it by day, week, month, and year. I used Java Swing to create the GUI and SQLite to store the relational database.",
-    "link": "https://github.com/markediez/Finance"
+    "github": "https://github.com/markediez/Finance",
+    "published": false
   }
 ]

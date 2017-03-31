@@ -1,0 +1,49 @@
+$project-border: 3px solid #949494;
+$project-fill: #FFFFFF;
+$border-radius: 10px;
+$space: 32px;
+
+$title-color: #FFFFFF;
+$title-fill: #757575;
+$title-fill-1: #1CAD6A;
+$title-fill-2: #1CA7AD;
+
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: $space;
+
+  & > * {
+    margin-top: $space;
+  }
+}
+
+.project {
+  display: flex;
+  align-self: center;
+  width: 90%;
+  height: 620px;
+  border: $project-border;
+  background-color: $project-fill;
+  border-radius: $border-radius;
+  -webkit-box-shadow: 0px 0px 32px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 32px -7px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 32px -7px rgba(0,0,0,0.75);
+
+  .title {
+    color: $title-color;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    background-color: $title-fill;
+
+    &.fill-1 {
+      background-color: $title-fill-1;
+    }
+
+    &.fill-2 {
+      background-color: $title-fill-2;
+    }
+  }
+}

@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 <head>
-	<title>Projects</title>
-	<meta charset="UTF-8">
+	<meta charset = "UTF-8">
+	<title>Mark Diez</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/projects.css">
+	<link rel="stylesheet" href="vendor/font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+
+	<script src="vendor/jquery.min.js"></script>
 </head>
 <body>
-	<h1>Projects</h1>
-	<a href="index.html">Home</a>
-	<a href="http://www.github.com/markediez">GitHub</a>
+
+<!-- Container holds all web-content -->
+<div id="container">
+	<!-- navigation div -->
+	<div id="nav-container" class="text-large">
+		<img src="logo.png"></img>
+		<a href="index.html"><span>About</span></a>
+		<a href="projects.html" class="active"><span>Projects</span></a>
+		<a href="#"><span>Blog</span></a>
+		<a href="contact.html"><span>Contact</span></a>
+	</div>
+	<!-- End navigation div -->
+
+	<!-- content div -->
+	<div id="content">
+		<div class="project">
+			<span class="title text-xlarge fill-1">Time Keeper</span>
+		</div>
+
+		<div class="project">
+			<span class="title text-xlarge fill-2">Kitchen Keeper</span>
+		</div>
+
+		<div class="project">
+			<span class="title text-xlarge">List Keeper</span>
+		</div>
+	</div>
+	<!-- End content div -->
+</div>
+<!-- End container div -->
+
+<!-- Load customs scripts after page load -->
+<script src="js/index.js"></script>
+<script src="js/projects.js"></script>
 </body>
 </html>

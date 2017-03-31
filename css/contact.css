@@ -57,7 +57,7 @@
 
 @media all and (orientation: landscape) {
   #content {
-    height: auto; } }
+    height: 100%; } }
 @media all and (min-width: 640px) and (orientation: landscape) {
   #content {
     align-items: center; }
@@ -72,7 +72,8 @@
       align-self: center;
       padding: 16px; }
       .form form textarea {
-        height: 300px; }
+        min-height: 300px;
+        height: 100%; }
 
   .tag-container {
     padding: 16px;

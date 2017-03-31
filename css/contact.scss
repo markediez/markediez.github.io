@@ -87,7 +87,7 @@ $outline: 3px solid #AD1C1C;
 
 @media all and (orientation:landscape) {
   #content {
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -130,7 +130,8 @@ $outline: 3px solid #AD1C1C;
     //   }
     //
       textarea {
-        height: 300px;
+        min-height: 300px;
+        height: 100%;
       }
     }
   }

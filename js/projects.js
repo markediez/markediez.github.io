@@ -77,7 +77,7 @@ function objectToProjectThumbnail(project, key) {
     dateRange += dateToString(project.end_date);
   }
 
-  return '<a class="project" data-key="' + key + '">  <span class="title text-xlarge no-select">' + project.title  + '</span> <span class="sub-title text-small">' + dateRange + '</span> </a>';
+  return '<a class="project" data-key="' + key + '">  <span class="title text-xlarge no-select">' + project.title  + '</span> <span class="sub-title text-small no-select">' + dateRange + '</span> </a>';
 }
 
 /**

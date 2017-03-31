@@ -1,9 +1,20 @@
 [
   {
+    "title": "Kitchen Keeper",
+    "images": [],
+    "start_date": "2016/12/20",
+    "end_date": false,
+    "status": "Active",
+    "tags": ["ruby-on-rails", "ruby", "adobe-xd", "javascript", "jquery", "postgresql", "css", "sass", "html"],
+    "description": "Kitchen Keeper is the next evolution of Wasteless and My Pantry. It is a platform that will allow you to make the most with what you have. Get hyped.",
+    "github": "http://github.com/markediez/kitchenkeeper",
+    "published": false
+  },
+  {
     "title": "List Keeper",
     "images": ["http://i.imgur.com/C4vqUxL.gif"],
-    "start_date": "2016-07-01",
-    "end_date": "2016-09-01",
+    "start_date": "2016/07/01",
+    "end_date": "2016/09/01",
     "status": "Inactive",
     "tags": ["android", "java", "sqlite"],
     "description": "List Keeper was initially a pre-work submission for CodePath in hopes of participating their Android Bootcamp. I have since expanded the simple todo application to persist template lists for occasional activities like camping. I am currently inspecting firebase and google sheets as a platform to keep the data online; this would open doors for a web-app version.",
@@ -13,8 +24,8 @@
   {
     "title": "Time Keeper",
     "images": ["http://i.imgur.com/AnTZ2Km.gif"],
-    "start_date": "2016-07-01",
-    "end_date": "2016-09-01",
+    "start_date": "2016/07/01",
+    "end_date": "2016/09/01",
     "status": "Partially Active",
     "tags": ["html", "css", "javascript", "jquery", "ajax", "php", "mysql"],
     "description": "Designed and implemented a web application to keep track of work done. It employed JavaScript, jQuery, HTML, CSS, and BootStrap in the front-end while using PHP and MySQL for the back-end.",
@@ -24,8 +35,8 @@
   {
     "title": "My Pantry",
     "images": ["http://i.imgur.com/n1R7E9v.gif"],
-    "start_date": "2016-01-01",
-    "end_date": "2016-02-01",
+    "start_date": "2016/01/01",
+    "end_date": "2016/02/01",
     "status": "Inactive",
     "tags": ["java"],
     "description": "Using Java, I formulated a console-based program to generate a shopping list. The user stores recipes through the program or a file then picks recipes he or she wants to cook. Once the user is done, the program will generate a .txt file containing the shopping list.",
@@ -35,8 +46,8 @@
   {
     "title": "Wasteless",
     "images": ["https://lh3.ggpht.com/UnlUsSJrfEf9dv81NYaFa4MrFjvOP8gx4TtM02D1_jSOlTFNy64kl5lRGtYODH3ZDg=h900-rw"],
-    "start_date": "2014-12-01",
-    "end_date": "2015-01-01",
+    "start_date": "2014/12/01",
+    "end_date": "2015/01/01",
     "status": "Inactive",
     "tags": ["android", "java", "gson"],
     "description": "Designed and implemented a simple android application to keep track of perishable food. Food items are manually added and stored at SharedPreference using GSON library. Notifications are sent when the item is within a week of its lifespan",
@@ -46,8 +57,8 @@
   {
     "title": "Finance",
     "images": ["http://i.imgur.com/JLuIqoo.gif"],
-    "start_date": "2014-06-01",
-    "end_date": "2014-07-01",
+    "start_date": "2014/06/01",
+    "end_date": "2014/07/01",
     "status": "Inactive",
     "tags": ["java", "java swing", "sqlite"],
     "description": "Created a simple gui-based java application to keep track of my expenses. It separates it by day, week, month, and year. I used Java Swing to create the GUI and SQLite to store the relational database.",

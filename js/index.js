@@ -45,19 +45,6 @@ function activateProject(el, thumbnail) {
   $(".section-description", projectsContainer).html(project.description);
 }
 
-function fetchProjects() {
-  $.ajax({
-    url: "json/projects.json",
-    dataType: "json",
-    success: function(result, status, xhr) {
-      insertProjects(result);
-    },
-    error: function(result, status, xhr) {
-      console.debug("Something went wrong: " + status);
-    }
-  });
-}
-
 function insertProjects(loadedProjects) {
   projects = loadedProjects;
 

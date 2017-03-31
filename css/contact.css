@@ -24,6 +24,7 @@
     .form form > *:focus {
       outline: none;
       border: 3px solid #AD1C1C;
+      border-color: #000000;
       border-radius: 10px; }
     .form form input[type=text] {
       display: block;
@@ -34,6 +35,7 @@
       .form form input[type=text]:focus {
         outline: none;
         border: 3px solid #AD1C1C;
+        border-color: #000000;
         border-radius: 10px; }
     .form form textarea {
       display: block;

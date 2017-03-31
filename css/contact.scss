@@ -38,6 +38,7 @@ $outline: 3px solid #AD1C1C;
     & > *:focus {
       outline: none;
       border: $outline;
+      border-color: $focus-border-color;
       border-radius: $border-radius;
     }
 
@@ -51,6 +52,7 @@ $outline: 3px solid #AD1C1C;
       &:focus {
         outline: none;
         border: $outline;
+        border-color: $focus-border-color;
         border-radius: $border-radius;
       }
     }

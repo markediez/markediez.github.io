@@ -13,8 +13,17 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-left: -10px; }
+    @media screen and (min-width: 640px) and (orientation: landscape) {
+      #content .tag-container {
+        margin-left: -2px; } }
     #content .tag-container .tag {
       margin: 10px; }
+      @media screen and (min-width: 640px) and (orientation: landscape) {
+        #content .tag-container .tag {
+          margin: 2px; } }
+      @media screen and (min-width: 640px) and (orientation: landscape) {
+        #content .tag-container .tag.link:not(:first-child) {
+          margin-left: 10px; } }
 
 .project {
   display: flex;

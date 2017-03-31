@@ -26,9 +26,21 @@ $sub-title-color: #000000;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-left: -10px;
+    @media screen and (min-width: 640px) and (orientation: landscape) {
+      margin-left: -2px;
+    }
 
     .tag {
       margin: 10px;
+      @media screen and (min-width: 640px) and (orientation: landscape) {
+        margin: 2px;
+      }
+
+      &.link:not(:first-child) {
+        @media screen and (min-width: 640px) and (orientation: landscape) {
+          margin-left: 10px;
+        }
+      }
     }
   }
 }

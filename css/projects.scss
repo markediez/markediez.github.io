@@ -5,8 +5,8 @@ $space: 32px;
 
 $title-color: #FFFFFF;
 $title-fill: #757575;
-$title-fill-1: #1CAD6A;
-$title-fill-2: #1CA7AD;
+
+$sub-title-color: #000000;
 
 #content {
   display: flex;
@@ -21,7 +21,9 @@ $title-fill-2: #1CA7AD;
 
 .project {
   display: flex;
+  flex-direction: column;
   align-self: center;
+  justify-content: center;
   width: 90%;
   height: 620px;
   border: $project-border;
@@ -37,13 +39,12 @@ $title-fill-2: #1CA7AD;
     text-align: center;
     align-self: center;
     background-color: $title-fill;
+  }
 
-    &.fill-1 {
-      background-color: $title-fill-1;
-    }
-
-    &.fill-2 {
-      background-color: $title-fill-2;
-    }
+  .sub-title {
+    color: $sub-title-color;
+    width: 100%;
+    text-align: center;
+    align-self: center;
   }
 }

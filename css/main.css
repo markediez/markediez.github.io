@@ -73,6 +73,9 @@ html, body {
     background-color: #AD1C1C;
     border: 1px solid #951818; }
 
+.text-small {
+  font-size: 32px; }
+
 .text-medium {
   font-size: 40px; }
 

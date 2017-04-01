@@ -5,7 +5,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Slabo 27px", "Roboto", "Helvetica"; }
 
 html, body {
   background-color: #FFFFFF;
@@ -13,6 +14,9 @@ html, body {
   font-family: "Slabo 27px", "Roboto", "Helvetica";
   padding: 0;
   margin: 0; }
+
+input, textarea, select {
+  font-family: inherit; }
 
 #container {
   width: 100%;

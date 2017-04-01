@@ -39,12 +39,8 @@ html, body {
   margin: 0;
 }
 
-form {
-  font-family: $font-family;
-}
-
-input {
-  font-family: $font-family;
+input, textarea, select{
+  font-family: inherit;
 }
 
 #container {

@@ -28,6 +28,7 @@ $light-border: #757575;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: $font-family;
 }
 
 html, body {
@@ -36,6 +37,14 @@ html, body {
   font-family: $font-family;
   padding: 0;
   margin: 0;
+}
+
+form {
+  font-family: $font-family;
+}
+
+input {
+  font-family: $font-family;
 }
 
 #container {
